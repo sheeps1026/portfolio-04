@@ -1,3 +1,7 @@
+.main {
+  display: flex;
+}
+
 .aside {
   width: 260px;
   background-color: #4e585c;
