@@ -1,0 +1,177 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 30px 0 33px;
+  background-color: #dbe0e2;
+}
+
+.top-btn {
+  display: flex;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.top-btn__red,
+.top-btn__orange,
+.top-btn__green {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.top-btn__red {
+  background-color: #ff6159;
+}
+
+.top-btn__orange {
+  margin: 0 8px;
+  background-color: #ffc12f;
+}
+
+.top-btn__green {
+  background-color: #29cf42;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+  margin-left: 122px;
+}
+
+.header-arrow {
+  display: flex;
+  align-items: center;
+  margin-right: 18px;
+}
+
+.header-arrow__prev,
+.header-arrow__next {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.header-arrow__prev {
+  margin-right: 10px;
+}
+
+.header-arrow__prev i,
+.header-arrow__next i {
+  color: #777777;
+  font-size: 12px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  width: 430px;
+  height: 30px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.search-btn {
+  margin: 0 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.search-btn i {
+  color: #777777;
+  font-size: 10px;
+}
+
+.search input {
+  width: 350px;
+  border: none;
+  color: #777777;
+  font-size: 14px;
+  line-height: 1.1721;
+}
+
+.right-header {
+  display: flex;
+  margin-right: 40px;
+}
+
+.note-btn {
+  display: flex;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  width: 165px;
+  height: 37px;
+  margin-right: 40px;
+  border-radius: 4px;
+  background-color: #2dbe60;
+}
+
+.note-btn div {
+  width: 126px;
+  cursor: pointer;
+}
+
+.note-btn div p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.1721;
+}
+
+.note-btn span {
+  position: absolute;
+  left: 74%;
+  width: 1px;
+  height: 37px;
+  border: 1px solid #fff;
+}
+
+.note-btn button {
+  width: 36px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.note-btn button i {
+  color: #fff;
+  font-size: 10px;
+}
+
+.notification {
+  margin-right: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.notification i {
+  color: #777777;
+  font-size: 23px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user p {
+  margin-right: 5px;
+  color: #777777;
+  font-size: 14px;
+  line-height: 1.1721;
+}
+
+.user button {
+  border: none;
+  background: none;
+  color: #777777;
+  cursor: pointer;
+}
+
+.user button i {
+  font-size: 10px;
+}
