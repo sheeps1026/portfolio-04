@@ -1,0 +1,116 @@
+.note {
+  width: 58.3333%;
+}
+
+.note-information {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 37px 66px 0 85px;
+}
+
+.note-tags {
+  display: flex;
+  align-items: center;
+}
+
+.note-tags p {
+  margin-right: 5px;
+  padding: 5px 15px;
+  border-radius: 100px;
+  color: #777;
+  background-color: #e9edee;
+  font-size: 12px;
+  line-height: 1.6666;
+  cursor: pointer;
+}
+
+.note-tags p:nth-child(3) {
+  margin-right: 10px;
+}
+
+.note-tags button {
+  border: none;
+  background: none;
+  color: #999;
+  font-size: 12px;
+  line-height: 1.1666;
+  cursor: pointer;
+}
+
+.note-icons {
+  display: flex;
+  align-items: center;
+}
+
+.note-icons button {
+  margin-right: 10px;
+  border: none;
+  background: none;
+  color: #999;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.note-icons button:nth-child(3) {
+  margin-right: 20px;
+}
+
+.note-icons button:last-child {
+  width: 78px;
+  height: 25px;
+  margin-right: 0;
+  border: 1.5px solid #999999;
+  border-radius: 4px;
+  color: #777;
+  font-size: 12px;
+  line-height: 1.1666;
+}
+
+.note-icons button:last-child i {
+  margin-left: 4.5px;
+  font-size: 10px;
+}
+
+.note-days {
+  display: flex;
+  margin-bottom: 22px;
+  padding-left: 85px;
+}
+
+.note-days p {
+  color: #999;
+  font-size: 12px;
+  line-height: 1.1666;
+}
+
+.note-days p:first-child {
+  margin-right: 30px;
+}
+
+.note-separator {
+  width: 100%;
+  height: 1px;
+  background-color: #dbe0e2;
+}
+
+.note-text {
+  padding: 32px 66px 0 85px;
+  color: #555555;
+}
+
+.note-title {
+  margin-bottom: 30px;
+  font-size: 30px;
+  line-height: 1.1666;
+}
+
+.note-desc {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.5625;
+}
+
+.note-desc:last-child {
+  margin-bottom: 0;
+}
