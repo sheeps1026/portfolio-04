@@ -1,4 +1,10 @@
 .note {
+  width: 81.9444%;
+}
+
+.note.position {
+  position: absolute;
+  left: 41.6666%;
   width: 58.3333%;
 }
 
