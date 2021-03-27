@@ -105,18 +105,38 @@
   color: #555555;
 }
 
-.note-title {
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 30px;
+}
+
+.note-title {
   font-size: 30px;
   line-height: 1.1666;
 }
 
+.note-copy {
+  text-align: center;
+  width: 78px;
+  padding: 4.5px;
+  border: 1.5px solid #999999;
+  border-radius: 4px;
+  color: #777;
+  background: none;
+  font-size: 12px;
+  line-height: 1.1666;
+  cursor: pointer;
+}
+
 .note-desc {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   font-size: 16px;
   line-height: 1.5625;
 }
 
-.note-desc:last-child {
-  margin-bottom: 0;
+.note-textarea textarea {
+  width: 100%;
+  padding: 5px;
 }
