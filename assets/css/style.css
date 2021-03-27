@@ -40,3 +40,13 @@ li {
   padding-left: 0;
   list-style-type: none;
 }
+
+/* Utilities */
+.fill-button {
+  transition: all 250ms ease-in-out;
+}
+
+.fill-button:hover {
+  background-color: #f5deb3;
+  opacity: 0.5;
+}
