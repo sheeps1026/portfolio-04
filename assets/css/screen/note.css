@@ -15,33 +15,39 @@
   padding: 37px 66px 0 85px;
 }
 
-.note-tags {
-  display: flex;
-  align-items: center;
+.tags-input {
+  border: 1px solid #777;
 }
 
-.note-tags p {
-  margin-right: 5px;
-  padding: 5px 15px;
+.tag {
+  display: inline-block;
+  margin: 2px 3px;
+  padding: 5px 10px;
   border-radius: 100px;
-  color: #777;
   background-color: #e9edee;
   font-size: 12px;
   line-height: 1.6666;
-  cursor: pointer;
+  transition: all 0.1s linear;
 }
 
-.note-tags p:nth-child(3) {
-  margin-right: 10px;
+.tag:hover {
+  color: #fff;
+  background-color: #f5deb3;
 }
 
-.note-tags button {
+.close::after {
+  content: "x";
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.close:hover::after {
+  color: red;
+}
+
+.main-input {
   border: none;
-  background: none;
-  color: #999;
-  font-size: 12px;
-  line-height: 1.1666;
-  cursor: pointer;
+  outline: none;
 }
 
 .note-icons {
