@@ -15,9 +15,8 @@
   padding: 37px 66px 0 85px;
 }
 
-.tags-input {
+.notes-tags {
   height: 35px;
-  border: 1px solid #777;
 }
 
 .tag {
@@ -36,17 +35,20 @@
   background-color: #f5deb3;
 }
 
-.close::after {
+.notes-close::after {
   content: "x";
   margin-left: 10px;
   font-weight: 700;
 }
 
-.close:hover::after {
+.notes-close:hover::after {
   color: red;
 }
 
-.main-input {
+.notes-input {
+  width: 250px;
+  margin-left: 10px;
+  padding: 7.5px 0;
   border: none;
   outline: none;
 }
