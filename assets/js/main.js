@@ -1,3 +1,4 @@
+const recentNotesItemSpan = document.querySelectorAll("recent-notes-item span");
 const bookmark = document.querySelector("#bookmark");
 
 const note = document.querySelector(".note");
@@ -12,10 +13,10 @@ function bookmarkActive() {
 }
 
 function bookmarkChange() {
-  if (bookmark.innerHTML == "O P E N") {
-    bookmark.innerHTML = "C L O S E";
+  if (bookmark.innerHTML == "페이지ㅤ열기") {
+    bookmark.innerHTML = "페이지ㅤ닫기";
   } else {
-    bookmark.innerHTML = "O P E N";
+    bookmark.innerHTML = "페이지ㅤ열기";
   }
 }
 
@@ -128,3 +129,16 @@ noteCopy.onclick = copy;
       .replace(/\W+/g, "-");
   }
 });
+
+// Mouse over
+function zoomIn(event) {
+  event.target.style.width = "400px";
+  event.target.style.transition = "all 250ms";
+}
+
+function zoomOut(event) {
+  event.target.style.width = "180px";
+  event.target.style.transition = "all 250ms";
+}
+
+recentNotesItemSpan.addEventListener("mouseover", zoomIn(event));

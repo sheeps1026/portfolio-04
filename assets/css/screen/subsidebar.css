@@ -68,11 +68,14 @@
   margin-bottom: 0;
 }
 
-.subsidebar-content-item p:first-child {
+.subsidebar-content-item span:first-child {
   width: 206px;
   color: #777777;
   font-size: 14px;
   line-height: 1.1428;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .subsidebar-content-item p:last-child {

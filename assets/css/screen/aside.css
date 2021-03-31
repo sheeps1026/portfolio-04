@@ -33,6 +33,13 @@
   margin-right: 10px;
 }
 
+.recent-notes-item span {
+  width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .aisde-separator {
   width: 100%;
   height: 1px;
