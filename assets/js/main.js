@@ -1,4 +1,3 @@
-const recentNotesItemSpan = document.querySelectorAll("recent-notes-item span");
 const bookmark = document.querySelector("#bookmark");
 
 const note = document.querySelector(".note");
@@ -130,15 +129,26 @@ noteCopy.onclick = copy;
   }
 });
 
-// Mouse over
-function zoomIn(event) {
-  event.target.style.width = "400px";
-  event.target.style.transition = "all 250ms";
+const searchInput = document.querySelector(".search-input");
+
+// Search
+function filter() {
+  const searchInput = document
+    .querySelector(".search-input")
+    .value.toUpperCase();
+  const notesItem = document.getElementsByClassName("recent-notes-item");
+
+  let notesItemTitle = 0;
+
+  for (let i = 0; i < notesItem.length; i++) {
+    notesItemTitle = notesItem[i].getElementsByClassName("notes-item-title");
+
+    if (notesItemTitle[0].innerHTML.toUpperCase().indexOf(searchInput) > -1) {
+      notesItem[i].style.display = "flex";
+    } else {
+      notesItem[i].style.display = "none";
+    }
+  }
 }
 
-function zoomOut(event) {
-  event.target.style.width = "180px";
-  event.target.style.transition = "all 250ms";
-}
-
-recentNotesItemSpan.addEventListener("mouseover", zoomIn(event));
+searchInput.addEventListener("keyup", filter);

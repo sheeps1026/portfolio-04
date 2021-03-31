@@ -9,6 +9,7 @@
 }
 
 .recent-notes {
+  height: 217px;
   padding: 30px;
   color: #fff;
   font-size: 14px;
@@ -33,7 +34,7 @@
   margin-right: 10px;
 }
 
-.recent-notes-item span {
+.notes-item-title {
   width: 180px;
   overflow: hidden;
   text-overflow: ellipsis;
