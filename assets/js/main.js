@@ -4,7 +4,6 @@ const bookmark = document.querySelector("#bookmark");
 
 const note = document.querySelector(".note");
 const noteTags = document.querySelector(".note-tags");
-const addTagsBtn = document.querySelector(".add-tags-btn");
 const iconClock = document.querySelector(".icon-clock");
 const noteCopy = document.querySelector(".note-copy");
 
@@ -18,7 +17,7 @@ function bookmarkActive() {
   document.querySelector(".note").classList.toggle("position");
 }
 
-function bookmarkChange() {
+function bookmarkTextChange() {
   if (bookmark.innerHTML == "페이지ㅤ열기") {
     bookmark.innerHTML = "페이지ㅤ닫기";
   } else {
@@ -26,12 +25,12 @@ function bookmarkChange() {
   }
 }
 
-function bookmarkFunction() {
+function bookmarkInit() {
   bookmarkActive();
-  bookmarkChange();
+  bookmarkTextChange();
 }
 
-bookmark.onclick = bookmarkFunction;
+bookmark.addEventListener("click", bookmarkInit);
 
 // Copy
 function copy() {
@@ -41,15 +40,25 @@ function copy() {
   tempDesc.setAttribute("type", "text");
   document.querySelector(".note-desc").appendChild(tempDesc);
 
-  tempDesc.value = noteDesc;
+  tempDesc.innerText = noteDesc;
 
   tempDesc.select();
   document.execCommand("copy");
 
   document.querySelector(".note-desc").removeChild(tempDesc);
+  noteCopy.innerText = "복사성공";
 }
 
-noteCopy.onclick = copy;
+function copyText() {
+  noteCopy.innerText = "복사";
+}
+
+function copyInit() {
+  copy();
+  setTimeout(copyText, 3000);
+}
+
+noteCopy.addEventListener("click", copyInit);
 
 // Add tags
 [].forEach.call(document.getElementsByClassName("notes-tags"), function (el) {
@@ -167,8 +176,8 @@ function dateHide() {
   clockContainer.classList.remove("active");
 }
 
-iconClock.onclick = dateShow;
-clockClose.onclick = dateHide;
+iconClock.addEventListener("click", dateShow);
+clockClose.addEventListener("click", dateHide);
 
 // Time
 function getTime() {
