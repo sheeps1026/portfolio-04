@@ -71,6 +71,18 @@
   margin-right: 20px;
 }
 
+.note-icons button:first-child,
+.note-icons button:nth-child(2),
+.note-icons button:nth-child(3) {
+  transition: transform 250ms ease-in-out;
+}
+
+.note-icons button:first-child:hover,
+.note-icons button:nth-child(2):hover,
+.note-icons button:nth-child(3):hover {
+  transform: scale(1.3);
+}
+
 .note-icons button:last-child {
   width: 78px;
   height: 25px;

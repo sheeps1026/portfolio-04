@@ -53,14 +53,17 @@
 }
 
 .category-card {
-  display: flex;
-  align-items: center;
   margin-bottom: 20px;
   color: #fff;
 }
 
 .category-card:last-child {
   margin-bottom: 0;
+}
+
+.category-card a {
+  display: flex;
+  align-items: center;
 }
 
 .category-card i {

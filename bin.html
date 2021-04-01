@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index / portfolio-04</title>
+    <title>recycle-bin / portfolio-04</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
@@ -14,9 +14,8 @@
     <link rel="stylesheet" href="./assets/css/reset-style.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/screen/header.css" />
-    <link rel="stylesheet" href="./assets/css/screen/aside.css" />
-    <link rel="stylesheet" href="./assets/css/screen/subsidebar.css" />
-    <link rel="stylesheet" href="./assets/css/screen/note.css" />
+    <link rel="stylesheet" href="./assets/css/screen/bin-aside.css" />
+    <link rel="stylesheet" href="./assets/css/screen/bin.css" />
   </head>
   <body>
     <header class="header">
@@ -81,8 +80,8 @@
           <div class="recent-notes-item">
             <i class="far fa-copy"></i>
             <span class="notes-item-title">
-              99u conference reflections and Insights
-            </span>
+              99u conference reflections and Insights</span
+            >
           </div>
           <div class="recent-notes-item">
             <i class="far fa-copy"></i>
@@ -121,7 +120,7 @@
               </a>
             </li>
             <li class="category-card">
-              <a href="bin.html">
+              <a href="recycle-bin.html">
                 <i class="far fa-trash-alt"></i>
                 <p>휴지통</p>
               </a>
@@ -133,103 +132,46 @@
           <i class="far fa-arrow-alt-circle-up"></i>
           <p>Upgrade</p>
         </div>
-        <button id="bookmark" class="bookmark">페이지ㅤ열기</button>
       </aside>
 
-      <section class="subsidebar">
-        <div class="subsidebar-header">
-          <i class="fas fa-book subsidebar-header-icon"></i>
-          <p>오늘 무엇을 공부했을까?</p>
-          <button class="subsidebar-menu">
-            <i class="fas fa-chevron-down"></i>
-          </button>
-          <button class="subsidebar-setting">
-            <i class="fas fa-ellipsis-h"></i>
-          </button>
-        </div>
-        <div class="subsidebar-separator"></div>
-        <div class="subsidebar-content">
-          <div class="subsidebar-content-item">
-            <span>99u conference reflections and insights</span>
-            <p>13 Jun</p>
-          </div>
-          <div class="subsidebar-content-item">
-            <span>To write is to learn</span>
-            <p>27 Mar</p>
-          </div>
-          <div class="subsidebar-content-item">
-            <span>Topcis to write</span>
-            <p>12 Mar</p>
-          </div>
-          <div class="subsidebar-content-item">
-            <span>Do a research if you're not contain</span>
-            <p>20 Jan</p>
-          </div>
-          <div class="subsidebar-content-item">
-            <span>Understanding the problem</span>
-            <p>19 Dec, 2017</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="note">
-        <div class="note-information">
-          <div class="notes-tags" data-name="notes-input">
-            <!-- <span class="tag">99u<span class="notes-close"></span></span>
-            <span class="tag">Design<span class="notes-close"></span></span>
-            <span class="tag">Conference<span class="notes-close"></span></span> -->
-            <!-- <input class="notes--input" type="text" /> -->
-          </div>
-          <div class="note-icons">
-            <button type="button">
-              <i class="far fa-clock"></i>
+      <section class="bin">
+        <ul class="bin-notes">
+          <li class="bin-note">
+            <h1 class="bin-title">Designer vs manager vs consumer</h1>
+            <button class="restoration">
+              <i class="fas fa-undo-alt"></i>
             </button>
-            <button type="button">
-              <i class="far fa-lightbulb"></i>
+          </li>
+          <div class="bin-separator"></div>
+          <li class="bin-note">
+            <h1 class="bin-title">99u conference reflections and insights</h1>
+            <button class="restoration">
+              <i class="fas fa-undo-alt"></i>
             </button>
-            <button type="button">
-              <i class="far fa-trash-alt"></i>
+          </li>
+          <div class="bin-separator"></div>
+          <li class="bin-note">
+            <h1 class="bin-title">UX research</h1>
+            <button class="restoration">
+              <i class="fas fa-undo-alt"></i>
             </button>
-            <button type="button">
-              공유
-              <i class="fas fa-chevron-down"></i>
+          </li>
+          <div class="bin-separator"></div>
+          <li class="bin-note">
+            <h1 class="bin-title">answering questions and I had a pleasure</h1>
+            <button class="restoration">
+              <i class="fas fa-undo-alt"></i>
             </button>
-          </div>
-        </div>
-        <div class="note-days">
-          <p>Created: 13 Jun</p>
-          <p>Updated: 19 Jun</p>
-        </div>
-        <div class="note-separator"></div>
-        <div class="note-text">
-          <header class="note-header">
-            <h1 class="note-title">99u conference reflections and insights</h1>
-            <button class="note-copy fill-button">복사</button>
-          </header>
-          <p class="note-desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A
-            distinctio exercitationem voluptatum veniam esse corporis maxime
-            tenetur libero iusto inventore nihil voluptas quasi vero modi
-            debitis, excepturi nam. Maiores, beatae officia autem quod quae
-            cupiditate fugiat. Sit sequi, aliquid quibusdam recusandae ab ullam
-            minima ad ea, enim natus perspiciatis doloremque esse minus numquam,
-            harum perferendis. Quam asperiores voluptas error pariatur explicabo
-            architecto dicta, ad repellat delectus cum, tenetur perspiciatis hic
-            distinctio corporis voluptate doloribus exercitationem? Provident
-            mollitia sapiente molestias in quaerat tempora ea maiores odit
-            veniam laudantium, consequuntur sit eos tempore commodi explicabo
-            illum, laborum quod adipisci! Reprehenderit, sit ea?
-          </p>
-          <div class="note-textarea">
-            <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="10"
-              placeholder="텍스트 상자에 텍스트를 입력하세요"
-            ></textarea>
-          </div>
-        </div>
+          </li>
+          <div class="bin-separator"></div>
+          <li class="bin-note">
+            <h1 class="bin-title">How to give feedback</h1>
+            <button class="restoration">
+              <i class="fas fa-undo-alt"></i>
+            </button>
+          </li>
+          <div class="bin-separator"></div>
+        </ul>
       </section>
     </main>
 
