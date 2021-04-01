@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./assets/css/screen/aside.css" />
     <link rel="stylesheet" href="./assets/css/screen/subsidebar.css" />
     <link rel="stylesheet" href="./assets/css/screen/note.css" />
+    <link rel="stylesheet" href="./assets/css/modal/clock.css" />
   </head>
   <body>
     <header class="header">
@@ -181,7 +182,7 @@
             <!-- <input class="notes--input" type="text" /> -->
           </div>
           <div class="note-icons">
-            <button type="button">
+            <button class="icon-clock" type="button">
               <i class="far fa-clock"></i>
             </button>
             <button type="button">
@@ -232,6 +233,14 @@
         </div>
       </section>
     </main>
+
+    <div class="clock">
+      <p>The current time is</p>
+      <h1>00:00</h1>
+      <button>
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
 
     <script src="./assets/js/main.js"></script>
   </body>
