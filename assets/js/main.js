@@ -150,17 +150,17 @@ function filter() {
   const searchInput = document
     .querySelector(".search-input")
     .value.toUpperCase();
-  const notesItem = document.getElementsByClassName("recent-notes-item");
+  const noteItem = document.getElementsByClassName("note-item");
 
-  let notesItemTitle = 0;
+  let noteItemTitle = 0;
 
-  for (let i = 0; i < notesItem.length; i++) {
-    notesItemTitle = notesItem[i].getElementsByClassName("notes-item-title");
+  for (let i = 0; i < noteItem.length; i++) {
+    noteItemTitle = noteItem[i].getElementsByClassName("note-item-title");
 
-    if (notesItemTitle[0].innerHTML.toUpperCase().indexOf(searchInput) > -1) {
-      notesItem[i].style.display = "flex";
+    if (noteItemTitle[0].innerHTML.toUpperCase().indexOf(searchInput) > -1) {
+      noteItem[i].style.display = "flex";
     } else {
-      notesItem[i].style.display = "none";
+      noteItem[i].style.display = "none";
     }
   }
 }
