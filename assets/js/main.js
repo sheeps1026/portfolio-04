@@ -1,10 +1,10 @@
 const searchInput = document.querySelector(".search-input");
-
 const bookmark = document.querySelector("#bookmark");
 
 const note = document.querySelector(".note");
 const noteTags = document.querySelector(".note-tags");
 const iconClock = document.querySelector(".icon-clock");
+const iconLight = document.querySelector(".icon-light");
 const noteCopy = document.querySelector(".note-copy");
 
 const clockContainer = document.querySelector(".clock");
@@ -197,3 +197,22 @@ function timeInit() {
 }
 
 timeInit();
+
+// Notification
+iconLight.addEventListener("click", () => {
+  document.querySelector(".icon-light").classList.toggle("active");
+});
+
+function getCount() {
+  let notifyCount = document.querySelectorAll(".notify-count");
+  const iconLight = document.querySelectorAll(".icon-light.active");
+  let checked = 0;
+
+  for (let i = 0; i < iconLight.length; i++) {
+    checked += 1;
+  }
+
+  notifyCount[0].innerText = checked;
+}
+
+iconLight.addEventListener("click", getCount);
