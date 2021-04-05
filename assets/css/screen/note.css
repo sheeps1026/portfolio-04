@@ -67,6 +67,11 @@
   cursor: pointer;
 }
 
+.icon-light.active {
+  color: red;
+  transform: scale(1.3);
+}
+
 .note-icons button:nth-child(3) {
   margin-right: 20px;
 }
