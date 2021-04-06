@@ -95,6 +95,7 @@
 
 .right-header {
   display: flex;
+  align-items: center;
   margin-right: 40px;
 }
 
@@ -146,7 +147,7 @@
 
 .notification {
   position: relative;
-  margin-right: 20px;
+  margin-right: 35px;
   border: none;
   background: none;
   cursor: pointer;
@@ -174,25 +175,28 @@
   line-height: 20px;
 }
 
-.user {
-  display: flex;
-  align-items: center;
+.user-form,
+.greetings {
+  display: none;
 }
 
-.user p {
-  margin-right: 5px;
+.user-form.showing,
+.greetings.showing {
+  display: block;
+}
+
+.user-form input {
+  height: 30px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 4px;
   color: #777777;
   font-size: 14px;
   line-height: 1.1721;
 }
 
-.user button {
-  border: none;
-  background: none;
+.greetings {
   color: #777777;
-  cursor: pointer;
-}
-
-.user button i {
-  font-size: 10px;
+  font-size: 14px;
+  line-height: 1.1721;
 }
