@@ -11,11 +11,11 @@
       integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/css/reset-style.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/screen/header.css" />
-    <link rel="stylesheet" href="./assets/css/screen/bin-aside.css" />
-    <link rel="stylesheet" href="./assets/css/screen/bin.css" />
+    <link rel="stylesheet" href="/assets/css/reset-style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/screen/header.css" />
+    <link rel="stylesheet" href="/assets/css/screen/bin-aside.css" />
+    <link rel="stylesheet" href="/assets/css/screen/bin.css" />
   </head>
   <body>
     <header class="header">
@@ -71,38 +71,52 @@
         <div class="bookmark"></div>
         <div class="recent-notes">
           <h3>최근 노트</h3>
-          <div class="recent-notes-item">
-            <i class="far fa-copy"></i>
-            <span class="notes-item-title">
-              Designer vs manager vs consumer
-            </span>
-          </div>
-          <div class="recent-notes-item">
-            <i class="far fa-copy"></i>
-            <span class="notes-item-title">
-              99u conference reflections and Insights</span
-            >
-          </div>
-          <div class="recent-notes-item">
-            <i class="far fa-copy"></i>
-            <span class="notes-item-title">UX research</span>
-          </div>
-          <div class="recent-notes-item">
-            <i class="far fa-copy"></i>
-            <span class="notes-item-title">
-              answering questions and I had a pleasure
-            </span>
-          </div>
-          <div class="recent-notes-item">
-            <i class="far fa-copy"></i>
-            <span class="notes-item-title">How to give feedback</span>
-          </div>
+          <nav>
+            <ul>
+              <li class="note-item">
+                <a href="/pages/note-2.html">
+                  <i class="far fa-copy"></i>
+                  <span class="note-item-title">
+                    Designer vs manager vs consumer
+                  </span>
+                </a>
+              </li>
+              <li class="note-item">
+                <a href="#">
+                  <i class="far fa-copy"></i>
+                  <span class="note-item-title">
+                    99u conference reflections and Insights
+                  </span>
+                </a>
+              </li>
+              <li class="note-item">
+                <a href="/pages/note-3.html">
+                  <i class="far fa-copy"></i>
+                  <span class="note-item-title">UX research</span>
+                </a>
+              </li>
+              <li class="note-item">
+                <a href="/pages/note-4.html">
+                  <i class="far fa-copy"></i>
+                  <span class="note-item-title">
+                    answering questions and I had a pleasure
+                  </span>
+                </a>
+              </li>
+              <li class="note-item">
+                <a href="/pages/note-5.html">
+                  <i class="far fa-copy"></i>
+                  <span class="note-item-title">How to give feedback</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
         <div class="aisde-separator"></div>
         <nav class="category">
           <ul>
             <li class="category-card">
-              <a href="index.html">
+              <a href="/index.html">
                 <i class="far fa-sticky-note"></i>
                 <p>노트</p>
               </a>
@@ -120,7 +134,7 @@
               </a>
             </li>
             <li class="category-card">
-              <a href="recycle-bin.html">
+              <a href="#">
                 <i class="far fa-trash-alt"></i>
                 <p>휴지통</p>
               </a>
@@ -132,6 +146,7 @@
           <i class="far fa-arrow-alt-circle-up"></i>
           <p>Upgrade</p>
         </div>
+        <button id="bookmark" class="bookmark">페이지ㅤ열기</button>
       </aside>
 
       <section class="bin">
@@ -175,6 +190,6 @@
       </section>
     </main>
 
-    <script src="./assets/js/main.js"></script>
+    <!-- <script src="/assets/js/main.js"></script> -->
   </body>
 </html>

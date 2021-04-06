@@ -20,22 +20,22 @@
   margin-bottom: 21px;
 }
 
-.recent-notes-item {
+.note-item {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.recent-notes-item:last-child {
+.note-item:last-child {
   margin-bottom: 0;
 }
 
-.recent-notes-item i {
-  margin-right: 10px;
+.note-item i {
+  margin-right: 5px;
 }
 
-.notes-item-title {
-  width: 180px;
+.note-item a {
+  width: 220px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
