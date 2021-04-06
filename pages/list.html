@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>note-2 / portfolio-04</title>
+    <title>Note list / portfolio-04</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
@@ -14,10 +14,8 @@
     <link rel="stylesheet" href="/assets/css/reset-style.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/screen/header.css" />
-    <link rel="stylesheet" href="/assets/css/screen/aside.css" />
-    <link rel="stylesheet" href="/assets/css/screen/subsidebar.css" />
-    <link rel="stylesheet" href="/assets/css/screen/note.css" />
-    <link rel="stylesheet" href="/assets/css/modal/clock.css" />
+    <link rel="stylesheet" href="/assets/css/screen/aside-2.css" />
+    <link rel="stylesheet" href="/assets/css/screen/list.css" />
   </head>
   <body>
     <header class="header">
@@ -57,7 +55,7 @@
           </button>
         </div>
         <button class="notification">
-          <i class="far fa-bell"></i>
+          <i class="fas fa-bell"></i>
           <span class="notify-count">0</span>
         </button>
         <div class="user">
@@ -77,7 +75,7 @@
           <nav>
             <ul>
               <li class="note-item">
-                <a href="#">
+                <a href="/pages/note-2.html">
                   <i class="far fa-copy"></i>
                   <span class="note-item-title">
                     Designer vs manager vs consumer
@@ -119,7 +117,7 @@
         <nav class="category">
           <ul>
             <li class="category-card">
-              <a href="/pages/list.html">
+              <a href="#">
                 <i class="far fa-sticky-note"></i>
                 <p>노트</p>
               </a>
@@ -149,115 +147,50 @@
           <i class="far fa-arrow-alt-circle-up"></i>
           <p>Upgrade</p>
         </div>
-        <button id="bookmark" class="bookmark">페이지ㅤ열기</button>
       </aside>
 
-      <section class="subsidebar">
-        <div class="subsidebar-header">
-          <i class="fas fa-book subsidebar-header-icon"></i>
-          <p>오늘 무엇을 공부했을까?</p>
-          <button class="subsidebar-menu">
-            <i class="fas fa-chevron-down"></i>
-          </button>
-          <button class="subsidebar-setting">
-            <i class="fas fa-ellipsis-h"></i>
-          </button>
-        </div>
-        <div class="subsidebar-separator"></div>
-        <div class="subsidebar-content">
-          <div class="subsidebar-content-item">
-            <span>99u conference reflections and insights</span>
-            <p>13 Jun</p>
-          </div>
-          <div class="subsidebar-content-item">
-            <span>To write is to learn</span>
-            <p>27 Mar</p>
-          </div>
-          <div class="subsidebar-content-item">
-            <span>Topcis to write</span>
-            <p>12 Mar</p>
-          </div>
-          <div class="subsidebar-content-item">
-            <span>Do a research if you're not contain</span>
-            <p>20 Jan</p>
-          </div>
-          <div class="subsidebar-content-item">
-            <span>Understanding the problem</span>
-            <p>19 Dec, 2017</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="note">
-        <div class="note-information">
-          <div class="notes-tags" data-name="notes-input">
-            <!-- <span class="tag">99u<span class="notes-close"></span></span>
-            <span class="tag">Design<span class="notes-close"></span></span>
-            <span class="tag">Conference<span class="notes-close"></span></span> -->
-            <!-- <input class="notes--input" type="text" /> -->
-          </div>
-          <div class="note-icons">
-            <button class="icon-clock" type="button">
-              <i class="far fa-clock"></i>
-            </button>
-            <button class="icon-light" type="button">
-              <i class="fas fa-lightbulb"></i>
-            </button>
-            <button type="button">
-              <i class="far fa-trash-alt"></i>
-            </button>
-            <button type="button">
-              공유
-              <i class="fas fa-chevron-down"></i>
-            </button>
-          </div>
-        </div>
-        <div class="note-days">
-          <p>Created: 13 Jun</p>
-          <p>Updated: 19 Jun</p>
-        </div>
-        <div class="note-separator"></div>
-        <div class="note-text">
-          <header class="note-header">
-            <h1 class="note-title">Designer vs manager vs consumer</h1>
-            <button class="note-copy fill-button">복사</button>
-          </header>
-          <p class="note-desc">
-            While studying UX design, I realized that as a person who was
-            unfamiliar with many of the roles in the tech world, I had
-            difficulty articulating to other non-technical people exactly what I
-            was getting myself into.<br /><br />
-            I knew what the definition of user experience design was: the
-            process of creating a positive interactive experience between a
-            customer and a product. The result should be a device that is both
-            accessible and a joy to use. I didn’t, however, know what UX wasn’t.
-            I remember telling a former colleague about my career change to UX,
-            only to have him answer: “What a coincidence — my wife does CX!” Was
-            this also UX? Did I mispronounce something? Awhile later I had
-            another UX designer warn me that UX design wasn’t going to be like
-            art class. What did that mean?
-          </p>
-          <div class="note-textarea">
-            <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="10"
-              placeholder="텍스트를 입력하세요"
-            ></textarea>
-          </div>
-        </div>
+      <section class="list">
+        <nav>
+          <ul class="list-notes">
+            <li class="list-note">
+              <a href="/pages/note-2.html">
+                <h1 class="list-title">Designer vs manager vs consumer</h1>
+              </a>
+            </li>
+            <div class="list-separator"></div>
+            <li class="list-note">
+              <a href="/index.html">
+                <h1 class="list-title">
+                  99u conference reflections and insights
+                </h1>
+              </a>
+            </li>
+            <div class="list-separator"></div>
+            <li class="list-note">
+              <a href="/pages/note-3.html">
+                <h1 class="list-title">UX research</h1>
+              </a>
+            </li>
+            <div class="list-separator"></div>
+            <li class="list-note">
+              <a href="/pages/note-4.html">
+                <h1 class="list-title">
+                  answering questions and I had a pleasure
+                </h1>
+              </a>
+            </li>
+            <div class="list-separator"></div>
+            <li class="list-note">
+              <a href="/pages/note-5.html">
+                <h1 class="list-title">How to give feedback</h1>
+              </a>
+            </li>
+            <div class="list-separator"></div>
+          </ul>
+        </nav>
       </section>
     </main>
 
-    <div class="clock">
-      <p>The current time is</p>
-      <h1>00:00</h1>
-      <button>
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-
-    <script src="/assets/js/main.js"></script>
+    <!-- <script src="/assets/js/main.js"></script> -->
   </body>
 </html>

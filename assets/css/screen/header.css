@@ -110,13 +110,16 @@
   background-color: #2dbe60;
 }
 
-.note-btn div {
+.new-note {
   width: 126px;
   cursor: pointer;
 }
 
-.note-btn div p {
+.new-note {
+  height: 100%;
+  border: none;
   color: #fff;
+  background: none;
   font-size: 14px;
   line-height: 1.1721;
 }
@@ -129,14 +132,14 @@
   border: 1px solid #fff;
 }
 
-.note-btn button {
+.note-btn__menu {
   width: 36px;
   border: none;
   background: none;
   cursor: pointer;
 }
 
-.note-btn button i {
+.note-btn__menu i {
   color: #fff;
   font-size: 10px;
 }

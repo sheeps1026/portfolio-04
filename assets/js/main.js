@@ -1,10 +1,13 @@
 const searchInput = document.querySelector(".search-input");
+const newNote = document.querySelector(".new-note");
+
 const bookmark = document.querySelector("#bookmark");
 
 const note = document.querySelector(".note");
 const noteTags = document.querySelector(".note-tags");
 const iconClock = document.querySelector(".icon-clock");
 const iconLight = document.querySelector(".icon-light");
+const iconTrash = document.querySelector(".icon-trash");
 const noteCopy = document.querySelector(".note-copy");
 
 const clockContainer = document.querySelector(".clock");
@@ -219,3 +222,21 @@ function getCount() {
 }
 
 iconLight.addEventListener("click", getCount);
+
+// Create
+// function noteCreate() {
+//   const note = document.createElement("section");
+//   note.classList.add("note");
+//   document.querySelector("body").appendChild(note);
+
+//   const noteInformation = document.createElement("div");
+//   noteInformation.classList.add("note-information");
+//   note.appendChild(noteInformation);
+
+//   const notesTag = document.createElement("div");
+//   notesTag.classList.add("notes-tags");
+//   notesTag.setAttribute("data-name", "notes-input");
+//   noteInformation.appendChild(notesTag);
+// }
+
+// newNote.addEventListener("click", noteCreate);

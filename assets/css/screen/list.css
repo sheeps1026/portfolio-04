@@ -1,0 +1,22 @@
+.list {
+  width: 81.9444%;
+}
+
+.list-note {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 30px 66px 0 85px;
+}
+
+.list-title {
+  color: #555555;
+  font-size: 20px;
+  line-height: 1.1666;
+}
+
+.list-separator {
+  width: 100%;
+  height: 1px;
+  background-color: #dbe0e2;
+}
