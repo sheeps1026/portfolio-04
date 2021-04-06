@@ -204,6 +204,7 @@ iconLight.addEventListener("click", () => {
 });
 
 function getCount() {
+  const notification = document.querySelector(".notification i");
   let notifyCount = document.querySelectorAll(".notify-count");
   const iconLight = document.querySelectorAll(".icon-light.active");
   let checked = 0;
@@ -213,6 +214,8 @@ function getCount() {
   }
 
   notifyCount[0].innerText = checked;
+
+  notification.classList.toggle("active");
 }
 
 iconLight.addEventListener("click", getCount);
