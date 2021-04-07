@@ -11,13 +11,13 @@
       integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/assets/css/reset-style.css" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link rel="stylesheet" href="/assets/css/screen/header.css" />
-    <link rel="stylesheet" href="/assets/css/screen/aside.css" />
-    <link rel="stylesheet" href="/assets/css/screen/subsidebar.css" />
-    <link rel="stylesheet" href="/assets/css/screen/note.css" />
-    <link rel="stylesheet" href="/assets/css/modal/clock.css" />
+    <link rel="stylesheet" href="../assets/css/reset-style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/screen/header.css" />
+    <link rel="stylesheet" href="../assets/css/screen/aside.css" />
+    <link rel="stylesheet" href="../assets/css/screen/subsidebar.css" />
+    <link rel="stylesheet" href="../assets/css/screen/note.css" />
+    <link rel="stylesheet" href="../assets/css/modal/clock.css" />
   </head>
   <body>
     <header class="header">
@@ -46,25 +46,24 @@
           />
         </div>
       </div>
+
       <div class="right-header">
         <div class="note-btn">
-          <div>
-            <p>노트 생성</p>
-          </div>
+          <button class="new-note">노트 생성</button>
           <span></span>
-          <button>
+          <button class="note-btn__menu">
             <i class="fas fa-chevron-down"></i>
           </button>
         </div>
         <button class="notification">
-          <i class="far fa-bell"></i>
+          <i class="fas fa-bell"></i>
           <span class="notify-count">0</span>
         </button>
         <div class="user">
-          <p>Dovile Janule</p>
-          <button>
-            <i class="fas fa-chevron-down"></i>
-          </button>
+          <form class="user-form" action="">
+            <input type="text" placeholder="이름을 입력하세요" />
+          </form>
+          <h4 class="greetings"></h4>
         </div>
       </div>
     </header>
@@ -85,7 +84,7 @@
                 </a>
               </li>
               <li class="note-item">
-                <a href="/index.html">
+                <a href="../index.html">
                   <i class="far fa-copy"></i>
                   <span class="note-item-title">
                     99u conference reflections and Insights
@@ -93,13 +92,13 @@
                 </a>
               </li>
               <li class="note-item">
-                <a href="/pages/note-3.html">
+                <a href="./note-3.html">
                   <i class="far fa-copy"></i>
                   <span class="note-item-title">UX research</span>
                 </a>
               </li>
               <li class="note-item">
-                <a href="/pages/note-4.html">
+                <a href="./note-4.html">
                   <i class="far fa-copy"></i>
                   <span class="note-item-title">
                     answering questions and I had a pleasure
@@ -107,7 +106,7 @@
                 </a>
               </li>
               <li class="note-item">
-                <a href="/pages/note-5.html">
+                <a href="./note-5.html">
                   <i class="far fa-copy"></i>
                   <span class="note-item-title">How to give feedback</span>
                 </a>
@@ -119,7 +118,7 @@
         <nav class="category">
           <ul>
             <li class="category-card">
-              <a href="/pages/list.html">
+              <a href="./list.html">
                 <i class="far fa-sticky-note"></i>
                 <p>노트</p>
               </a>
@@ -137,7 +136,7 @@
               </a>
             </li>
             <li class="category-card">
-              <a href="/pages/bin.html">
+              <a href="./bin.html">
                 <i class="far fa-trash-alt"></i>
                 <p>휴지통</p>
               </a>
@@ -258,6 +257,12 @@
       </button>
     </div>
 
-    <script src="/assets/js/main.js"></script>
+    <script src="../assets/js/bookmark.js"></script>
+    <script src="../assets/js/copy.js"></script>
+    <script src="../assets/js/tags.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/clock.js"></script>
+    <script src="../assets/js/notification.js"></script>
+    <script src="../assets/js/form.js"></script>
   </body>
 </html>
