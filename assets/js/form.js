@@ -1,4 +1,3 @@
-// Form
 const userForm = document.querySelector(".user-form");
 const userInput = userForm.querySelector("input");
 const greetings = document.querySelector(".greetings");

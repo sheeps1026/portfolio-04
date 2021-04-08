@@ -73,14 +73,10 @@
   background-color: #fff;
 }
 
-.search-btn {
-  margin: 0 10px;
+.search i {
+  margin: 0 10px 0 15px;
   border: none;
   background: none;
-  cursor: pointer;
-}
-
-.search-btn i {
   color: #777777;
   font-size: 10px;
 }
@@ -99,50 +95,17 @@
   margin-right: 40px;
 }
 
-.note-btn {
-  display: flex;
-  position: relative;
-  text-align: center;
-  align-items: center;
-  width: 165px;
+.create-memo {
+  width: 100px;
   height: 37px;
-  margin-right: 40px;
-  border-radius: 4px;
-  background-color: #2dbe60;
-}
-
-.new-note {
-  width: 126px;
-  cursor: pointer;
-}
-
-.new-note {
-  height: 100%;
+  margin-right: 30px;
   border: none;
+  border-radius: 4px;
   color: #fff;
-  background: none;
+  background-color: #2dbe60;
   font-size: 14px;
   line-height: 1.1721;
-}
-
-.note-btn span {
-  position: absolute;
-  left: 74%;
-  width: 1px;
-  height: 37px;
-  border: 1px solid #fff;
-}
-
-.note-btn__menu {
-  width: 36px;
-  border: none;
-  background: none;
   cursor: pointer;
-}
-
-.note-btn__menu i {
-  color: #fff;
-  font-size: 10px;
 }
 
 .notification {
@@ -164,7 +127,7 @@
 
 .notify-count {
   position: absolute;
-  top: 0%;
+  top: -8px;
   left: 25px;
   width: 20px;
   height: 20px;
