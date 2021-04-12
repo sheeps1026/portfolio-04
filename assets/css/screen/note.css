@@ -99,11 +99,6 @@
   line-height: 1.1666;
 }
 
-.note-icons button:last-child i {
-  margin-left: 4.5px;
-  font-size: 10px;
-}
-
 .note-days {
   display: flex;
   margin-bottom: 22px;
@@ -157,9 +152,16 @@
 }
 
 .note-desc {
+  width: 100%;
   margin-bottom: 60px;
+  padding: 5px;
+  border: none;
   font-size: 16px;
   line-height: 1.5625;
+}
+
+.note-desc:hover {
+  border: 1px solid #777;
 }
 
 .note-textarea textarea {

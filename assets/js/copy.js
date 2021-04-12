@@ -1,19 +1,20 @@
-// Copy
+"use strict";
+
 const noteCopy = document.querySelector(".note-copy");
+const noteDescText = document.querySelector(".note-desc").value;
 
 function copy() {
-  const noteDesc = document.querySelector(".note-desc").innerText;
+  const tempText = document.createElement("textarea");
+  document.body.appendChild(tempText);
 
-  const tempDesc = document.createElement("textarea");
-  tempDesc.setAttribute("type", "text");
-  document.querySelector(".note-desc").appendChild(tempDesc);
+  tempText.innerText = noteDescText;
 
-  tempDesc.innerText = noteDesc;
-
-  tempDesc.select();
+  tempText.select();
   document.execCommand("copy");
 
-  document.querySelector(".note-desc").removeChild(tempDesc);
+  console.log(tempText);
+
+  document.body.removeChild(tempText);
   noteCopy.innerText = "복사성공";
 }
 
