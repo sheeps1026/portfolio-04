@@ -4,18 +4,23 @@ const modifyBtn = document.querySelector(".modify-btn");
 
 let modifyText;
 
+const noteTitle = document.querySelector(".note-title");
 const noteCopy = document.querySelector(".note-copy");
 const noteDesc = document.querySelector(".note-desc");
 
 function modify() {
   if (modifyBtn.innerText === "수정하기") {
+    noteTitle.removeAttribute("disabled");
     noteDesc.removeAttribute("disabled");
 
+    noteTitle.style.backgroundColor = "#E1E2E1";
     noteDesc.style.backgroundColor = "#E1E2E1";
     modifyBtn.innerText = "수정중";
   } else {
+    noteTitle.setAttribute("disabled", true);
     noteDesc.setAttribute("disabled", true);
 
+    noteTitle.style.background = "none";
     noteDesc.style.background = "none";
     modifyBtn.innerText = "수정하기";
   }

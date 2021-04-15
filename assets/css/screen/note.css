@@ -117,8 +117,16 @@
 }
 
 .note-title {
+  width: 700px;
+  border: none;
+  background: none;
+  color: #777;
   font-size: 30px;
   line-height: 1.1666;
+}
+
+.note-title:hover {
+  border: 1px solid #777;
 }
 
 .note-header div button {
