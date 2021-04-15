@@ -1,5 +1,5 @@
 // Add tags
-[].forEach.call(document.getElementsByClassName("notes-tags"), function (el) {
+[].forEach.call(document.getElementsByClassName("note-tags"), function (el) {
   const notesInput = document.createElement("input");
   const hiddenInput = document.createElement("input");
   const tags = [];

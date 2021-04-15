@@ -9,9 +9,6 @@ function saveName(text) {
   localStorage.setItem(USER_LS, text);
 }
 
-const modalOverlay = document.createElement("div");
-document.body.appendChild(modalOverlay);
-
 function handleSubmit(event) {
   event.preventDefault();
   const currentValue = userInput.value;

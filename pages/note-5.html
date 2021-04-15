@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../assets/css/screen/subsidebar.css" />
     <link rel="stylesheet" href="../assets/css/screen/note.css" />
     <link rel="stylesheet" href="../assets/css/modal/clock.css" />
+    <link rel="stylesheet" href="../assets/css/modal/error.css" />
   </head>
   <body>
     <header class="header">
@@ -109,9 +110,13 @@
         <nav class="category">
           <ul>
             <li class="category-card">
+              <i class="fas fa-plus-circle"></i>
+              <p>페이지 작성하기</p>
+            </li>
+            <li class="category-card">
               <a href="./memo.html">
                 <i class="fas fa-tag"></i>
-                <p>메모 생성</p>
+                <p>메모</p>
               </a>
             </li>
             <li class="category-card">
@@ -123,9 +128,8 @@
           </ul>
         </nav>
         <div class="aisde-separator"></div>
-        <div class="upgrade">
-          <i class="far fa-arrow-alt-circle-up"></i>
-          <p>Upgrade</p>
+        <div class="copyright">
+          <p>Copyright © 2021 Yang Seunggap.</p>
         </div>
         <button id="bookmark" class="bookmark">페이지ㅤ열기</button>
       </aside>
@@ -168,7 +172,7 @@
 
       <section class="note">
         <div class="note-information">
-          <div class="notes-tags" data-name="notes-input">
+          <div class="note-tags" data-name="notes-input">
             <!-- <span class="tag">99u<span class="notes-close"></span></span>
             <span class="tag">Design<span class="notes-close"></span></span>
             <span class="tag">Conference<span class="notes-close"></span></span> -->
@@ -225,6 +229,12 @@
       </button>
     </div>
 
+    <div class="error">
+      <p>Error</p>
+      <p>페이지를 삭제한 후 클릭하세요</p>
+      <button type="button">Close</button>
+    </div>
+
     <script src="../assets/js/bookmark.js"></script>
     <script src="../assets/js/modfiy-copy.js"></script>
     <script src="../assets/js/tags.js"></script>
@@ -232,5 +242,7 @@
     <script src="../assets/js/clock.js"></script>
     <script src="../assets/js/notification.js"></script>
     <script src="../assets/js/form.js"></script>
+    <script src="../assets/js/delete.js"></script>
+    <script src="../assets/js/create.js"></script>
   </body>
 </html>

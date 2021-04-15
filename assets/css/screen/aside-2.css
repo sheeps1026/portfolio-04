@@ -53,8 +53,11 @@
 }
 
 .category-card {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
   color: #fff;
+  cursor: pointer;
 }
 
 .category-card:last-child {
@@ -78,19 +81,12 @@
   line-height: 1.1721;
 }
 
-.upgrade {
-  display: flex;
-  align-items: center;
+.copyright {
   padding: 15px 0 15px 30px;
+}
+
+.copyright p {
   color: #fff;
-}
-
-.upgrade i {
-  margin-right: 13px;
-  font-size: 26px;
-}
-
-.upgrade p {
   font-size: 14px;
   line-height: 1.1721;
 }
