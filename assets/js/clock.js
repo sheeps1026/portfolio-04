@@ -1,4 +1,5 @@
-// Date
+"use strict";
+
 const iconClock = document.querySelector(".icon-clock");
 
 const clockContainer = document.querySelector(".clock");
