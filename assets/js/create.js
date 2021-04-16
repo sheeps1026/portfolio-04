@@ -90,8 +90,10 @@ function createPage() {
 
   const modifyBtn = document.createElement("button");
   const noteCopy = document.createElement("button");
+  modifyBtn.setAttribute("id", "modify-btn");
   modifyBtn.classList.add("modify-btn", "fill-button");
   noteCopy.classList.add("note-copy", "fill-button");
+  noteCopy.setAttribute("id", "note-copy");
   modifyBtn.setAttribute("type", "button");
   modifyBtn.innerText = "수정하기";
   noteCopy.innerText = "복사하기";

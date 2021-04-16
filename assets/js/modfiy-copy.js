@@ -1,64 +1,55 @@
 "use strict";
 
-const modifyBtn = document.querySelector(".modify-btn");
+function modify(e) {
+  const modifyBtn = document.getElementById("modify-btn");
 
-let modifyText;
+  let modifyText;
 
-const noteTitle = document.querySelector(".note-title");
-const noteCopy = document.querySelector(".note-copy");
-const noteDesc = document.querySelector(".note-desc");
+  const noteTitle = document.querySelector(".note-title");
+  const noteDesc = document.querySelector(".note-desc");
 
-function modify() {
-  if (modifyBtn.innerText === "수정하기") {
-    noteTitle.removeAttribute("disabled");
-    noteDesc.removeAttribute("disabled");
+  switch (e.target.id) {
+    case "modify-btn":
+      if (modifyBtn.innerText === "수정하기") {
+        noteTitle.removeAttribute("disabled");
+        noteDesc.removeAttribute("disabled");
 
-    noteTitle.style.backgroundColor = "#E1E2E1";
-    noteDesc.style.backgroundColor = "#E1E2E1";
-    modifyBtn.innerText = "수정중";
-  } else {
-    noteTitle.setAttribute("disabled", true);
-    noteDesc.setAttribute("disabled", true);
+        noteTitle.style.backgroundColor = "#E1E2E1";
+        noteDesc.style.backgroundColor = "#E1E2E1";
 
-    noteTitle.style.background = "none";
-    noteDesc.style.background = "none";
-    modifyBtn.innerText = "수정하기";
-  }
+        modifyBtn.innerText = "수정중";
+      } else {
+        noteTitle.setAttribute("disabled", true);
+        noteDesc.setAttribute("disabled", true);
 
-  modifyText = noteDesc.value;
-  // console.log(`modifyText: ${modifyText}`);
+        noteTitle.style.background = "none";
+        noteDesc.style.background = "none";
 
-  noteDesc.innerHTML = modifyText;
-  // console.log(`noteDesc.value: ${noteDesc.value}`);
-}
+        modifyBtn.innerText = "수정하기";
+      }
 
-function copy() {
-  if (document.querySelector(".note-desc")) {
-    const tempText = document.createElement("textarea");
-    document.body.appendChild(tempText);
-
-    tempText.innerHTML = noteDesc.value;
-
-    tempText.select();
-    document.execCommand("copy");
-
-    // console.log(tempText);
-    document.body.removeChild(tempText);
-
-    noteCopy.innerText = "복사성공";
-  } else {
-    noteCopy.innerText = "복사실패";
+      modifyText = noteDesc.value;
+      noteDesc.innerHTML = modifyText;
+      break;
   }
 }
 
-function copyText() {
-  noteCopy.innerText = "복사하기";
+function copy(e) {
+  const noteDesc = document.querySelector(".note-desc");
+
+  switch (e.target.id) {
+    case "note-copy":
+      const tempText = document.createElement("textarea");
+      document.body.appendChild(tempText);
+
+      tempText.innerHTML = noteDesc.value;
+
+      tempText.select();
+      document.execCommand("copy");
+
+      document.body.removeChild(tempText);
+  }
 }
 
-function copyInit() {
-  copy();
-  setTimeout(copyText, 2000);
-}
-
-modifyBtn.addEventListener("click", modify);
-noteCopy.addEventListener("click", copyInit);
+document.addEventListener("click", modify);
+document.addEventListener("click", copy);
