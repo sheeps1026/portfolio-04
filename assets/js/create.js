@@ -36,6 +36,7 @@ function createPage() {
   iconClock.classList.add("icon-clock");
   iconLight.classList.add("icon-light");
   iconDelete.classList.add("icon-delete");
+  iconClock.setAttribute("id", "icon-clock");
   iconClock.setAttribute("type", "button");
   iconLight.setAttribute("type", "button");
   iconDelete.setAttribute("type", "button");
@@ -49,8 +50,10 @@ function createPage() {
   ICON_1.classList.add("far", "fa-clock");
   iconClock.appendChild(ICON_1);
   ICON_2.classList.add("fas", "fa-lightbulb");
+  ICON_2.setAttribute("id", "icon-light");
   iconLight.appendChild(ICON_2);
   ICON_3.classList.add("far", "fa-trash-alt");
+  ICON_3.setAttribute("id", "icon-delete");
   iconDelete.appendChild(ICON_3);
 
   // note-days

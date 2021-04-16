@@ -1,9 +1,11 @@
 "use strict";
 
-const note = document.querySelector(".note");
+function deletePage(e) {
+  const note = document.querySelector(".note");
 
-const iconDelete = document.querySelector(".note-icons button:last-child");
+  if (e.target.id === "icon-delete") {
+    note.remove();
+  }
+}
 
-iconDelete.addEventListener("click", function () {
-  note.remove();
-});
+document.addEventListener("click", deletePage);
