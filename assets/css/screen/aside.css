@@ -3,21 +3,23 @@
 }
 
 .aside {
-  position: relative;
   width: 18.0555%;
   background-color: #4e585c;
 }
 
+.aside h3 {
+  padding: 18.5px 30px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.1875;
+}
+
 .recent-notes {
   height: 217px;
-  padding: 30px;
+  padding: 20px 30px;
   color: #fff;
   font-size: 14px;
   line-height: 1.1721;
-}
-
-.recent-notes h3 {
-  margin-bottom: 21px;
 }
 
 .note-item {
@@ -31,14 +33,7 @@
 }
 
 .note-item i {
-  margin-right: 5px;
-}
-
-.note-item a {
-  width: 220px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  margin-right: 10px;
 }
 
 .aisde-separator {
@@ -89,17 +84,4 @@
   color: #fff;
   font-size: 14px;
   line-height: 1.1721;
-}
-
-.bookmark {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 30px;
-  height: 217px;
-  border: none;
-  background-color: #757575;
-  font-size: 14px;
-  color: #fff;
-  cursor: pointer;
 }

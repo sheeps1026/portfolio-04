@@ -45,7 +45,6 @@
           />
         </div>
       </div>
-
       <div class="right-header">
         <button class="notification">
           <i class="fas fa-bell"></i>
@@ -62,67 +61,27 @@
 
     <main class="main">
       <aside class="aside">
-        <div class="bookmark"></div>
+        <h3>모든 책</h3>
+        <div class="aisde-separator"></div>
         <div class="recent-notes">
-          <h3>최근 노트</h3>
-          <nav>
-            <ul>
-              <li class="note-item">
-                <a href="./pages/note-2.html">
-                  <i class="far fa-copy"></i>
-                  <span class="note-item-title">
-                    Designer vs manager vs consumer
-                  </span>
-                </a>
-              </li>
-              <li class="note-item">
-                <a href="#">
-                  <i class="far fa-copy"></i>
-                  <span class="note-item-title">
-                    기본적인 문서 작성 툴입니다.
-                  </span>
-                </a>
-              </li>
-              <li class="note-item">
-                <a href="./pages/note-3.html">
-                  <i class="far fa-copy"></i>
-                  <span class="note-item-title">UX research</span>
-                </a>
-              </li>
-              <li class="note-item">
-                <a href="./pages/note-4.html">
-                  <i class="far fa-copy"></i>
-                  <span class="note-item-title">
-                    answering questions and I had a pleasure
-                  </span>
-                </a>
-              </li>
-              <li class="note-item">
-                <a href="./pages/note-5.html">
-                  <i class="far fa-copy"></i>
-                  <span class="note-item-title">How to give feedback</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <ul>
+            <li class="note-item">
+              <i class="far fa-copy"></i>
+              <span class="note-item-title">기본 문서 1</span>
+            </li>
+          </ul>
         </div>
         <div class="aisde-separator"></div>
         <nav class="category">
           <ul>
             <li class="category-card create-btn">
               <i class="fas fa-plus-circle"></i>
-              <p>페이지 작성하기</p>
+              <p>책 추가하기</p>
             </li>
             <li class="category-card">
               <a href="./pages/memo.html">
                 <i class="fas fa-tag"></i>
                 <p>메모</p>
-              </a>
-            </li>
-            <li class="category-card">
-              <a href="./pages/bin.html">
-                <i class="far fa-trash-alt"></i>
-                <p>휴지통</p>
               </a>
             </li>
           </ul>
@@ -131,62 +90,41 @@
         <div class="copyright">
           <p>Copyright © 2021 Yang Seunggap.</p>
         </div>
-        <button id="bookmark" class="bookmark">페이지ㅤ열기</button>
       </aside>
 
       <section class="subsidebar">
-        <div class="subsidebar-header">
-          <i class="fas fa-book subsidebar-header-icon"></i>
-          <p>오늘 무엇을 공부했을까?</p>
-          <button class="subsidebar-menu">
-            <i class="fas fa-chevron-down"></i>
-          </button>
-          <button class="subsidebar-setting">
-            <i class="fas fa-ellipsis-h"></i>
-          </button>
-        </div>
+        <button class="note-create">
+          <i class="fas fa-plus-circle"></i>
+          <p>새 글 작성하기</p>
+        </button>
         <div class="subsidebar-separator"></div>
-        <div class="subsidebar-content">
-          <div class="subsidebar-content-item">
-            <span>기본적인 문서 작성 툴입니다.</span>
+        <ul class="subsidebar-content">
+          <li class="subsidebar-content-item">
+            <p>기본적인 문서 작성 툴입니다.</p>
             <p>13 Jun</p>
-          </div>
-          <div class="subsidebar-content-item">
-            <span>To write is to learn</span>
-            <p>27 Mar</p>
-          </div>
-          <div class="subsidebar-content-item">
-            <span>Topcis to write</span>
-            <p>12 Mar</p>
-          </div>
-          <div class="subsidebar-content-item">
-            <span>Do a research if you're not contain</span>
-            <p>20 Jan</p>
-          </div>
-          <div class="subsidebar-content-item">
-            <span>Understanding the problem</span>
-            <p>19 Dec, 2017</p>
-          </div>
-        </div>
+          </li>
+        </ul>
       </section>
+
+      <div class="main-separator"></div>
 
       <section class="note">
         <div class="note-information">
           <div class="note-tags" data-name="notes-input">
-              <!-- <span class="tag">99u<span class="notes-close"></span></span>
+            <!-- <span class="tag">99u<span class="notes-close"></span></span>
               <span class="tag">Design<span class="notes-close"></span></span>
               <span class="tag">Conference<span class="notes-close"></span></span> -->
-              <!-- <input class="notes--input" type="text" /> -->
+            <!-- <input class="notes--input" type="text" /> -->
           </div>
           <div class="note-icons">
-            <button id="icon-clock" class="icon-clock" type="button">
-              <i class="far fa-clock"></i>
+            <button class="icon-clock" type="button">
+              <i id="iconClock" class="far fa-clock"></i>
             </button>
             <button class="icon-light" type="button">
-              <i id="icon-light" class="fas fa-lightbulb"></i>
+              <i id="iconLight" class="fas fa-lightbulb"></i>
             </button>
-            <button class="icon-delete" type="button">
-              <i id="icon-delete" class="far fa-trash-alt"></i>
+            <button id="iconDelete" class="icon-delete" type="button">
+              <i class="far fa-trash-alt"></i>
             </button>
           </div>
         </div>
@@ -194,15 +132,25 @@
           <p>Created: 13 Jun</p>
           <p>Updated: 19 Jun</p>
         </div>
-        <div class="note-separator"></div>
         <div class="note-text">
           <header class="note-header">
-            <input class="note-title" value="기본적인 문서 작성 툴입니다." disabled></input>
+            <input
+              class="note-title"
+              value="기본적인 문서 작성 툴입니다."
+              type="text"
+              disabled
+            />
             <div>
-              <button id="modify-btn" class="modify-btn fill-button" type="button">
+              <button
+                id="modifyBtn"
+                class="modify-btn fill-button"
+                type="button"
+              >
                 수정하기
               </button>
-              <button id="note-copy" class="note-copy fill-button">복사하기</button>
+              <button id="noteCopy" class="note-copy fill-button">
+                복사하기
+              </button>
             </div>
           </header>
           <textarea class="note-desc" cols="30" rows="10" disabled>
@@ -213,7 +161,7 @@
           <div class="note-textarea">
             <textarea
               cols="30"
-              rows="10"
+              rows="15"
               placeholder="텍스트를 입력하세요"
             ></textarea>
           </div>
@@ -235,11 +183,10 @@
       <button type="button">Close</button>
     </div>
 
-    <script src="./assets/js/bookmark.js"></script>
     <script src="./assets/js/modfiy-copy.js"></script>
     <script src="./assets/js/tags.js"></script>
     <script src="./assets/js/search.js"></script>
-    <script src="./assets/js/clock.js"></script>
+    <!-- <script src="./assets/js/clock.js"></script> -->
     <script src="./assets/js/notification.js"></script>
     <script src="./assets/js/form.js"></script>
     <script src="./assets/js/delete.js"></script>

@@ -3,14 +3,14 @@
 const main = document.querySelector(".main");
 const noteLength = document.getElementsByClassName("note");
 
-const createBtn = document.querySelector(".category-card:first-child");
+const noteCreateBtn = document.querySelector(".note-create");
 
 const error = document.querySelector(".error");
 const errorClose = document.querySelector(".error button");
 
 const modalOverlay = document.createElement("div");
 
-function createPage() {
+function createNote() {
   // note
   const note = document.createElement("section");
   note.classList.add("note");
@@ -36,7 +36,7 @@ function createPage() {
   iconClock.classList.add("icon-clock");
   iconLight.classList.add("icon-light");
   iconDelete.classList.add("icon-delete");
-  iconClock.setAttribute("id", "icon-clock");
+  iconDelete.setAttribute("id", "iconDelete");
   iconClock.setAttribute("type", "button");
   iconLight.setAttribute("type", "button");
   iconDelete.setAttribute("type", "button");
@@ -48,12 +48,13 @@ function createPage() {
   const ICON_2 = document.createElement("i");
   const ICON_3 = document.createElement("i");
   ICON_1.classList.add("far", "fa-clock");
+  ICON_1.setAttribute("id", "iconClock");
   iconClock.appendChild(ICON_1);
   ICON_2.classList.add("fas", "fa-lightbulb");
-  ICON_2.setAttribute("id", "icon-light");
+  ICON_2.setAttribute("id", "iconLight");
   iconLight.appendChild(ICON_2);
   ICON_3.classList.add("far", "fa-trash-alt");
-  ICON_3.setAttribute("id", "icon-delete");
+  // ICON_3.setAttribute("id", "iconDelete");
   iconDelete.appendChild(ICON_3);
 
   // note-days
@@ -93,10 +94,10 @@ function createPage() {
 
   const modifyBtn = document.createElement("button");
   const noteCopy = document.createElement("button");
-  modifyBtn.setAttribute("id", "modify-btn");
+  modifyBtn.setAttribute("id", "modifyBtn");
   modifyBtn.classList.add("modify-btn", "fill-button");
   noteCopy.classList.add("note-copy", "fill-button");
-  noteCopy.setAttribute("id", "note-copy");
+  noteCopy.setAttribute("id", "noteCopy");
   modifyBtn.setAttribute("type", "button");
   modifyBtn.innerText = "수정하기";
   noteCopy.innerText = "복사하기";
@@ -138,7 +139,7 @@ function showModal() {
     error.classList.add("active");
     document.body.appendChild(modalOverlay);
   } else {
-    createPage();
+    createNote();
   }
 }
 
@@ -148,5 +149,5 @@ function hideModal() {
   document.body.removeChild(modalOverlay);
 }
 
-createBtn.addEventListener("click", showModal);
+noteCreateBtn.addEventListener("click", showModal);
 errorClose.addEventListener("click", hideModal);

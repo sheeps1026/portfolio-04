@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="../assets/css/reset-style.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/screen/header.css" />
-    <link rel="stylesheet" href="../assets/css/screen/aside-2.css" />
+    <link rel="stylesheet" href="../assets/css/screen/aside.css" />
+    <link rel="stylesheet" href="../assets/css/screen/subsidebar.css" />
     <link rel="stylesheet" href="../assets/css/screen/memo.css" />
   </head>
   <body>
@@ -58,45 +59,14 @@
 
     <main class="main">
       <aside class="aside">
-        <div class="bookmark"></div>
         <div class="recent-notes">
-          <h3>최근 노트</h3>
+          <h3>모든 책</h3>
           <nav>
             <ul>
               <li class="note-item">
-                <a href="./note-2.html">
-                  <i class="far fa-copy"></i>
-                  <span class="note-item-title">
-                    Designer vs manager vs consumer
-                  </span>
-                </a>
-              </li>
-              <li class="note-item">
                 <a href="../index.html">
                   <i class="far fa-copy"></i>
-                  <span class="note-item-title">
-                    기본적인 문서 작성 툴입니다.
-                  </span>
-                </a>
-              </li>
-              <li class="note-item">
-                <a href="./note-3.html">
-                  <i class="far fa-copy"></i>
-                  <span class="note-item-title">UX research</span>
-                </a>
-              </li>
-              <li class="note-item">
-                <a href="./note-4.html">
-                  <i class="far fa-copy"></i>
-                  <span class="note-item-title">
-                    answering questions and I had a pleasure
-                  </span>
-                </a>
-              </li>
-              <li class="note-item">
-                <a href="./note-5.html">
-                  <i class="far fa-copy"></i>
-                  <span class="note-item-title">How to give feedback</span>
+                  <span class="note-item-title">기본 문서 1</span>
                 </a>
               </li>
             </ul>
@@ -105,20 +75,14 @@
         <div class="aisde-separator"></div>
         <nav class="category">
           <ul>
-            <li class="category-card">
+            <li class="category-card create-btn">
               <i class="fas fa-plus-circle"></i>
-              <p>페이지 작성하기</p>
+              <p>책 추가하기</p>
             </li>
             <li class="category-card">
-              <a href="#">
+              <a href="./pages/memo.html">
                 <i class="fas fa-tag"></i>
                 <p>메모</p>
-              </a>
-            </li>
-            <li class="category-card">
-              <a href="./bin.html">
-                <i class="far fa-trash-alt"></i>
-                <p>휴지통</p>
               </a>
             </li>
           </ul>
@@ -128,6 +92,22 @@
           <p>Copyright © 2021 Yang Seunggap.</p>
         </div>
       </aside>
+
+      <section class="subsidebar">
+        <div class="subsidebar-header">
+          <i class="fas fa-book subsidebar-header-icon"></i>
+          <p>새 글 작성하기</p>
+        </div>
+        <div class="subsidebar-separator"></div>
+        <div class="subsidebar-content">
+          <ul class="subsidebar-content-item">
+            <li>
+              <span>기본적인 문서 작성 툴입니다.</span>
+              <p>13 Jun</p>
+            </li>
+          </ul>
+        </div>
+      </section>
 
       <section class="toDo">
         <form class="toDo-form" action="">

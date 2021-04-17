@@ -1,50 +1,28 @@
 .subsidebar {
-  position: absolute;
-  left: -23.6111%;
   width: 23.6111%;
-  height: 100%;
-  background-color: #e9edee;
 }
 
-.subsidebar.active {
-  left: 18.0555%;
-}
-
-.subsidebar-header {
+.note-create {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  padding: 30px 25px 0 22px;
-  color: #777777;
-}
-
-.subsidebar-header-icon {
-  margin-right: 10px;
-  font-size: 26px;
-}
-
-.subsidebar-header p {
-  margin-right: 5px;
-  font-size: 16px;
-  line-height: 1.1875;
-}
-
-.subsidebar-menu,
-.subsidebar-setting {
+  padding: 15px 30px 15px 22px;
   border: none;
   background: none;
-  transform: translateY(3px);
+  color: #777777;
   cursor: pointer;
 }
 
-.subsidebar-menu {
-  margin-right: 50px;
+.note-create i {
+  margin-right: 10px;
+  color: #138ef7;
+  font-size: 26px;
 }
 
-.subsidebar-menu i,
-.subsidebar-setting i {
-  color: #777777;
+.note-create p {
+  margin-right: 5px;
+  color: #138ef7;
   font-size: 16px;
+  line-height: 1.1875;
 }
 
 .subsidebar-separator {
@@ -68,7 +46,7 @@
   margin-bottom: 0;
 }
 
-.subsidebar-content-item span:first-child {
+.subsidebar-content-item p:first-child {
   width: 206px;
   color: #777777;
   font-size: 14px;
@@ -82,4 +60,10 @@
   color: #999999;
   font-size: 12px;
   line-height: 0.9333;
+}
+
+.main-separator {
+  width: 1px;
+  height: auto;
+  background: #dbe0e2;
 }

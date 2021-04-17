@@ -3,7 +3,7 @@
 function deletePage(e) {
   const note = document.querySelector(".note");
 
-  if (e.target.id === "icon-delete") {
+  if (e.target.id === "iconDelete") {
     note.remove();
   }
 }
