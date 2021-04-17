@@ -1,12 +1,15 @@
-.note {
+.note-container {
   width: 58.3333%;
+}
+
+.note {
+  padding: 37px 66px 0;
 }
 
 .note-information {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  padding: 37px 66px 0 85px;
 }
 
 .note-tags {
@@ -82,7 +85,8 @@
 
 .note-days {
   display: flex;
-  padding-left: 85px;
+  margin-bottom: 20px;
+  padding-left: 5px;
 }
 
 .note-days p {
@@ -96,7 +100,6 @@
 }
 
 .note-text {
-  padding: 32px 66px 0 85px;
   color: #555555;
 }
 

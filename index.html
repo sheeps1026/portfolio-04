@@ -15,10 +15,9 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/screen/header.css" />
     <link rel="stylesheet" href="./assets/css/screen/aside.css" />
-    <link rel="stylesheet" href="./assets/css/screen/subsidebar.css" />
+    <link rel="stylesheet" href="./assets/css/screen/sidebar.css" />
     <link rel="stylesheet" href="./assets/css/screen/note.css" />
     <link rel="stylesheet" href="./assets/css/modal/clock.css" />
-    <link rel="stylesheet" href="./assets/css/modal/error.css" />
   </head>
   <body>
     <header class="header">
@@ -62,7 +61,7 @@
     <main class="main">
       <aside class="aside">
         <h3>모든 책</h3>
-        <div class="aisde-separator"></div>
+        <div class="aside-separator"></div>
         <div class="recent-notes">
           <ul>
             <li class="note-item">
@@ -71,101 +70,110 @@
             </li>
           </ul>
         </div>
-        <div class="aisde-separator"></div>
-        <nav class="category">
-          <ul>
-            <li class="category-card create-btn">
-              <i class="fas fa-plus-circle"></i>
-              <p>책 추가하기</p>
-            </li>
-            <li class="category-card">
-              <a href="./pages/memo.html">
-                <i class="fas fa-tag"></i>
-                <p>메모</p>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div class="aisde-separator"></div>
+        <div class="aside-separator"></div>
+        <div class="category">
+          <button class="book-create">
+            <i class="fas fa-plus-circle"></i>
+            <p>책 추가하기</p>
+          </button>
+          <nav>
+            <ul>
+              <li class="memo">
+                <a href="./pages/memo.html">
+                  <i class="fas fa-tag"></i>
+                  <p>메모</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="aside-separator"></div>
         <div class="copyright">
           <p>Copyright © 2021 Yang Seunggap.</p>
         </div>
       </aside>
 
-      <section class="subsidebar">
+      <section class="sidebar">
         <button class="note-create">
           <i class="fas fa-plus-circle"></i>
           <p>새 글 작성하기</p>
         </button>
-        <div class="subsidebar-separator"></div>
-        <ul class="subsidebar-content">
-          <li class="subsidebar-content-item">
-            <p>기본적인 문서 작성 툴입니다.</p>
-            <p>13 Jun</p>
+        <div class="sidebar-separator"></div>
+        <ul class="sidebar-list">
+          <li id="subsideItem" class="sidebar-item">
+            <input type="text" value="기본적인 문서 작성 툴입니다." disabled />
+            <textarea cols="30" rows="2" disabled>
+작성법은 상당히 간단합니다. 쓰고 싶은 글의 내용을 생각하고 그걸 적으면 됩니다.</textarea
+            >
           </li>
+          <div class="sidebar-separator"></div>
         </ul>
       </section>
 
       <div class="main-separator"></div>
 
-      <section class="note">
-        <div class="note-information">
-          <div class="note-tags" data-name="notes-input">
-            <!-- <span class="tag">99u<span class="notes-close"></span></span>
-              <span class="tag">Design<span class="notes-close"></span></span>
-              <span class="tag">Conference<span class="notes-close"></span></span> -->
-            <!-- <input class="notes--input" type="text" /> -->
-          </div>
-          <div class="note-icons">
-            <button class="icon-clock" type="button">
-              <i id="iconClock" class="far fa-clock"></i>
-            </button>
-            <button class="icon-light" type="button">
-              <i id="iconLight" class="fas fa-lightbulb"></i>
-            </button>
-            <button id="iconDelete" class="icon-delete" type="button">
-              <i class="far fa-trash-alt"></i>
-            </button>
-          </div>
-        </div>
-        <div class="note-days">
-          <p>Created: 13 Jun</p>
-          <p>Updated: 19 Jun</p>
-        </div>
-        <div class="note-text">
-          <header class="note-header">
-            <input
-              class="note-title"
-              value="기본적인 문서 작성 툴입니다."
-              type="text"
-              disabled
-            />
-            <div>
-              <button
-                id="modifyBtn"
-                class="modify-btn fill-button"
-                type="button"
-              >
-                수정하기
-              </button>
-              <button id="noteCopy" class="note-copy fill-button">
-                복사하기
-              </button>
+      <section class="note-container">
+        <ul class="note-list">
+          <li class="note">
+            <div class="note-information">
+              <div class="note-tags" data-name="notes-input">
+                <!-- <span class="tag">99u<span class="notes-close"></span></span>
+                    <span class="tag">Design<span class="notes-close"></span></span>
+                    <span class="tag">Conference<span class="notes-close"></span></span> -->
+                <!-- <input class="notes--input" type="text" /> -->
+              </div>
+              <div class="note-icons">
+                <button class="icon-clock" type="button">
+                  <i id="iconClock" class="far fa-clock"></i>
+                </button>
+                <button class="icon-light" type="button">
+                  <i id="iconLight" class="fas fa-lightbulb"></i>
+                </button>
+                <button id="iconDelete" class="icon-delete" type="button">
+                  <i class="far fa-trash-alt"></i>
+                </button>
+              </div>
             </div>
-          </header>
-          <textarea class="note-desc" cols="30" rows="10" disabled>
+            <div class="note-days">
+              <p>Created: 13 Jun</p>
+              <p>Updated: 19 Jun</p>
+            </div>
+            <div class="note-text">
+              <header class="note-header">
+                <input
+                  class="note-title"
+                  value="기본적인 문서 작성 툴입니다."
+                  type="text"
+                  disabled
+                />
+                <div>
+                  <button
+                    id="modifyBtn"
+                    class="modify-btn fill-button"
+                    type="button"
+                  >
+                    수정하기
+                  </button>
+                  <button id="noteCopy" class="note-copy fill-button">
+                    복사하기
+                  </button>
+                </div>
+              </header>
+              <textarea class="note-desc" cols="30" rows="10" disabled>
 싹이 아니한 안고, 뛰노는 열락의 무엇을 천고에 때에, 위하여서 교향악이다. 없으면, 내려온 싸인 귀는 말이다. 만천하의 이상 희망의 보이는 가는이 노년에게서 있다. 석가는 되려니와, 할지니, 우리 기쁘며, 그들의 것이다. 것은 풀이 오직 남는 따뜻한 것이다. 그들의 별과 과실이 열매를 청춘 붙잡아 얼음과 너의 보라. 꾸며 아름답고 놀이 보는 우리 부패뿐이다. 속잎나고, 청춘의 영락과 지혜는 영원히 노래하며 사막이다. 하는 보배를 위하여 위하여, 철환하였는가? 인생의 열락의 할지니, 힘있다. 위하여서, 있을 우리 이상의 이상은 가슴이 가슴에 사막이다.
-  
+        
 가치를 역사를 싶이 새 우리는 이것이다. 있는 아름답고 위하여 같은 설산에서 끝에 끓는 것이다. 열락의 들어 못할 것이다. 할지라도 그들의 같이, 위하여서. 든 속에서 주며, 것이다. 대중을 품었기 그들은 것이다. 투명하되 얼마나 불어 이상은 사는가 청춘은 가슴에 말이다. 넣는 그들은 새가 뛰노는 같으며, 피가 부패를 희망의 살 황금시대다. 얼음에 같이 품에 내는 그들은 목숨이 교향악이다. 앞이 보이는 고해을 소담스러운 역사를 용감하고 있으랴?</textarea
-          >
-          <div class="note-textarea">
-            <textarea
-              cols="30"
-              rows="15"
-              placeholder="텍스트를 입력하세요"
-            ></textarea>
-          </div>
-        </div>
+              >
+              <div class="note-textarea">
+                <textarea
+                  cols="30"
+                  rows="15"
+                  placeholder="텍스트를 입력하세요"
+                ></textarea>
+              </div>
+            </div>
+          </li>
+        </ul>
       </section>
     </main>
 
@@ -175,12 +183,6 @@
       <button>
         <i class="fas fa-times"></i>
       </button>
-    </div>
-
-    <div class="error">
-      <p>Error</p>
-      <p>페이지를 삭제한 후 클릭하세요</p>
-      <button type="button">Close</button>
     </div>
 
     <script src="./assets/js/modfiy-copy.js"></script>
