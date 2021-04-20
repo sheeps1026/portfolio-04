@@ -1,20 +1,36 @@
 "use strict";
 
-const main = document.querySelector(".main");
-const noteLength = document.getElementsByClassName("note");
-
 const noteCreateBtn = document.querySelector(".note-create");
 
-const error = document.querySelector(".error");
-const errorClose = document.querySelector(".error button");
+function createPreview() {
+  const sidebarList = document.querySelector(".sidebar-list");
 
-const modalOverlay = document.createElement("div");
+  const sidebarItem = document.createElement("li");
+  sidebarItem.classList.add("sidebar-item");
+  sidebarList.appendChild(sidebarItem);
+
+  const input = document.createElement("input");
+  const textarea = document.createElement("textarea");
+  input.value = "기본적인 문석 작성툴입니다.";
+  textarea.innerText =
+    "작성법은 상당히 간단합니다. 쓰고 싶은 글의 내용을 생각하고 그걸 적으면 됩니다.";
+  input.setAttribute("disabled", true);
+  textarea.setAttribute("disabled", true);
+  sidebarItem.appendChild(input);
+  sidebarItem.appendChild(textarea);
+
+  const sidebarSeparator = document.createElement("div");
+  sidebarSeparator.classList.add("sidebar-separator");
+  sidebarList.appendChild(sidebarSeparator);
+}
 
 function createNote() {
+  const noteList = document.querySelector(".note-list");
+
   // note
-  const note = document.createElement("section");
+  const note = document.createElement("li");
   note.classList.add("note");
-  main.appendChild(note);
+  noteList.appendChild(note);
 
   // note-information
   const noteInformation = document.createElement("div");
@@ -54,7 +70,6 @@ function createNote() {
   ICON_2.setAttribute("id", "iconLight");
   iconLight.appendChild(ICON_2);
   ICON_3.classList.add("far", "fa-trash-alt");
-  // ICON_3.setAttribute("id", "iconDelete");
   iconDelete.appendChild(ICON_3);
 
   // note-days
@@ -124,30 +139,35 @@ function createNote() {
   noteTextarea.appendChild(noteTextarea_TEXTAREA);
 }
 
-function modalStyle() {
-  modalOverlay.style.position = "fixed";
-  modalOverlay.style.top = "0px";
-  modalOverlay.style.left = "0px";
-  modalOverlay.style.width = "100%";
-  modalOverlay.style.height = "100%";
-  modalOverlay.style.backgroundColor = "rgba(0, 0, 0, 0.4";
-}
+function previewBtn() {
+  createPreview();
+  createNote();
 
-function showModal() {
-  if (noteLength.length > 0) {
-    modalStyle();
-    error.classList.add("active");
-    document.body.appendChild(modalOverlay);
-  } else {
-    createNote();
+  const sidebarItem = document.querySelectorAll(".sidebar-item");
+  let note = document.querySelectorAll(".note");
+
+  console.log(note.length);
+  console.log(sidebarItem.length);
+  for (let i = 0; i < note.length - 1; i++) {
+    note[i].style.display = "none";
+  }
+
+  for (let j = 0; j < sidebarItem.length; j++) {
+    sidebarItem[j].addEventListener("click", () => {
+      note[j].style.display = "block";
+
+      for (let k = 0; k < note.length; k++) {
+        if (j !== k) {
+          note[k].style.display = "none";
+        }
+      }
+    });
   }
 }
 
-function hideModal() {
-  modalStyle();
-  error.classList.remove("active");
-  document.body.removeChild(modalOverlay);
-}
+noteCreateBtn.addEventListener("click", previewBtn);
 
-noteCreateBtn.addEventListener("click", showModal);
-errorClose.addEventListener("click", hideModal);
+// document.addEventListener("click", function (event) {
+//   console.log(event.target);
+//   console.log(event.currentTarget);
+// });
