@@ -1,24 +1,40 @@
 "use strict";
 
-const iconClock = document.querySelector(".icon-clock");
+function clockShow(event) {
+  const iconClock = document.querySelectorAll(".icon-clock");
+  const clockContainer = document.querySelector(".clock");
 
-const clockContainer = document.querySelector(".clock");
-const currentTime = clockContainer.querySelector("h1");
-const clockClose = document.querySelector(".clock button");
-
-function dateShow() {
-  clockContainer.classList.add("active");
+  if (event.target.id === "iconClock") {
+    for (let i = 0; i < iconClock.length; i++) {
+      clockContainer.classList.add("active");
+    }
+  }
 }
 
-function dateHide() {
+function clockHide(event) {
+  const clockContainer = document.querySelector(".clock");
+
+  let elem = event.target;
+
+  while (!elem.classList.contains("clock-btn")) {
+    elem = elem.parentNode;
+
+    if (elem.nodeName === "BODY") {
+      elem = null;
+
+      return;
+    }
+  }
+
   clockContainer.classList.remove("active");
 }
 
-iconClock.addEventListener("click", dateShow);
-clockClose.addEventListener("click", dateHide);
+document.addEventListener("click", clockShow);
+document.addEventListener("click", clockHide);
 
-// Time
 function getTime() {
+  const currentTime = document.querySelector(".clock h1");
+
   const date = new Date();
   const hours = date.getHours();
   const minutes = date.getMinutes();
