@@ -52,7 +52,6 @@ function createNote() {
   iconClock.classList.add("icon-clock");
   iconLight.classList.add("icon-light");
   iconDelete.classList.add("icon-delete");
-  iconDelete.setAttribute("id", "iconDelete");
   iconClock.setAttribute("type", "button");
   iconLight.setAttribute("type", "button");
   iconDelete.setAttribute("type", "button");
@@ -146,8 +145,6 @@ function previewBtn() {
   const sidebarItem = document.querySelectorAll(".sidebar-item");
   let note = document.querySelectorAll(".note");
 
-  console.log(note.length);
-  console.log(sidebarItem.length);
   for (let i = 0; i < note.length - 1; i++) {
     note[i].style.display = "none";
   }
@@ -166,8 +163,3 @@ function previewBtn() {
 }
 
 noteCreateBtn.addEventListener("click", previewBtn);
-
-// document.addEventListener("click", function (event) {
-//   console.log(event.target);
-//   console.log(event.currentTarget);
-// });

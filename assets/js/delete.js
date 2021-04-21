@@ -1,10 +1,19 @@
 "use strict";
 
-function deletePage(e) {
-  const note = document.querySelector(".note");
+function deletePage() {
+  const sidebarItem = document.querySelectorAll(".sidebar-item");
+  const note = document.querySelectorAll(".note");
+  const iconDelete = document.querySelectorAll(".icon-delete");
 
-  if (e.target.id === "iconDelete") {
-    note.remove();
+  for (let i = 0; i < note.length; i++) {
+    for (let j = 0; j < sidebarItem.length; j++) {
+      iconDelete[i].addEventListener("click", () => {
+        if (i === j) {
+          note[i].remove();
+          sidebarItem[j].remove();
+        }
+      });
+    }
   }
 }
 

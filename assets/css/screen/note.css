@@ -79,10 +79,6 @@
   transform: scale(1.3);
 }
 
-.note-icons button:last-child i {
-  pointer-events: none;
-}
-
 .note-days {
   display: flex;
   margin-bottom: 20px;
