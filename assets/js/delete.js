@@ -2,6 +2,9 @@
 
 function deletePage() {
   const sidebarItem = document.querySelectorAll(".sidebar-item");
+
+  const sidebarSeparator = document.querySelectorAll(".sidebar-separator");
+
   const note = document.querySelectorAll(".note");
   const iconDelete = document.querySelectorAll(".icon-delete");
 
@@ -11,6 +14,7 @@ function deletePage() {
         if (i === j) {
           note[i].remove();
           sidebarItem[j].remove();
+          sidebarSeparator[i].remove();
         }
       });
     }

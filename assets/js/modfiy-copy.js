@@ -1,42 +1,39 @@
 "use strict";
 
-function modify(e) {
+function modify(event) {
   const modifyBtn = document.querySelectorAll(".modify-btn");
-
-  let modifyText;
 
   const noteTitle = document.querySelectorAll(".note-title");
   const noteDesc = document.querySelectorAll(".note-desc");
 
-  for (let i = 0; i < modifyBtn.length; i++) {
-    for (let j = 0; j < noteTitle.length; j++) {
-      for (let k = 0; k < noteDesc.length; k++) {
-        if (e.target.id === "modifyBtn") {
-          modifyText.length = noteDesc.length;
+  let elem = event.target;
 
-          console.log(modifyText);
-          console.log(modifyText.length);
+  if (elem.id === "modifyBtn") {
+    for (let i = 0; i < modifyBtn.length; i++) {
+      for (let j = 0; j < noteDesc.length; j++) {
+        if (i === j) {
+          let modifyText;
 
           if (modifyBtn[i].innerText === "수정하기") {
-            noteTitle[j].removeAttribute("disabled");
-            noteDesc[k].removeAttribute("disabled");
+            noteTitle[i].removeAttribute("disabled");
+            noteDesc[i].removeAttribute("disabled");
 
-            noteTitle[j].style.backgroundColor = "#E1E2E1";
-            noteDesc[k].style.backgroundColor = "#E1E2E1";
+            noteTitle[i].style.backgroundColor = "#F5F5F6";
+            noteDesc[i].style.backgroundColor = "#F5F5F6";
 
             modifyBtn[i].innerText = "수정중";
           } else {
-            noteTitle[j].setAttribute("disabled", true);
-            noteDesc[k].setAttribute("disabled", true);
+            noteTitle[i].setAttribute("disabled", true);
+            noteDesc[i].setAttribute("disabled", true);
 
-            noteTitle[j].style.background = "none";
-            noteDesc[k].style.background = "none";
+            noteTitle[i].style.background = "none";
+            noteDesc[i].style.background = "none";
 
             modifyBtn[i].innerText = "수정하기";
-          }
 
-          modifyText[i] = noteDesc[k].value;
-          noteDesc[k].innerHTML = modifyText[i];
+            modifyText = noteDesc[i].value;
+            noteDesc[i].innerHTML = modifyText;
+          }
         }
       }
     }
