@@ -16,17 +16,19 @@ function clockHide(event) {
 
   let elem = event.target;
 
-  while (!elem.classList.contains("clock-btn")) {
-    elem = elem.parentNode;
+  if (elem.id === "clockBtn") {
+    while (!elem.classList.contains("clock-btn")) {
+      elem = elem.parentNode;
 
-    if (elem.nodeName === "BODY") {
-      elem = null;
+      if (elem.nodeName === "BODY") {
+        elem = null;
 
-      return;
+        return;
+      }
     }
-  }
 
-  clockContainer.classList.remove("active");
+    clockContainer.classList.remove("active");
+  }
 }
 
 document.addEventListener("click", clockShow);
