@@ -81,8 +81,8 @@ function createNote() {
   ICON_1.classList.add("far", "fa-clock");
   ICON_1.setAttribute("id", "iconClock");
   iconClock.appendChild(ICON_1);
-  ICON_2.classList.add("fas", "fa-lightbulb");
   ICON_2.setAttribute("id", "iconLight");
+  ICON_2.classList.add("fas", "fa-lightbulb");
   iconLight.appendChild(ICON_2);
   ICON_3.classList.add("far", "fa-trash-alt");
   iconDelete.appendChild(ICON_3);

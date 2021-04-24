@@ -1,52 +1,27 @@
-// "use strict";
-// const notification = document.querySelector(".notification i");
-// let notifyCount = document.querySelectorAll(".notify-count");
-
-// const iconLight = document.querySelector(".icon-light");
-// const iconLightActive = document.querySelectorAll(".icon-light.active");
-
-// let i = 0;
-// let checked = 0;
-
-// iconLight.addEventListener("click", () => {
-//   iconLight.classList.toggle("active");
-// });
-
-// function getCount() {
-//   for (i = 0; i < iconLightActive.length; i++) {
-//     checked += 1;
-//   }
-
-//   notifyCount[i].innerText = checked;
-
-//   console.log(`notifyCount: ${notifyCount.length}`);
-//   console.log(`iconLightActive.length: ${iconLightActive.length}`);
-//   console.log(`notifyCount[0].innerText: ${notifyCount[0].innerText}`);
-
-//   // notification.classList.toggle("active");
-// }
-
-// iconLight.addEventListener("click", getCount);
-
-const iconLight = document.querySelector(".icon-light");
-
-iconLight.addEventListener("click", () => {
-  document.querySelector(".icon-light").classList.toggle("active");
-});
+"use strict";
 
 function getCount() {
-  const notification = document.querySelector(".notification i");
-  let notifyCount = document.querySelectorAll(".notify-count");
-  const iconLight = document.querySelectorAll(".icon-light.active");
-  let checked = 0;
+  let notifyCount = document.querySelector(".notify-count");
+  const iconLight = document.querySelectorAll(".icon-light");
 
   for (let i = 0; i < iconLight.length; i++) {
-    checked += 1;
+    iconLight[i].addEventListener("click", () => {
+      let checked = 0;
+
+      iconLight[i].classList.toggle("active");
+
+      for (let j = 0; j < iconLight.length; j++) {
+        if (iconLight[j].classList.contains("active")) {
+          checked += 1;
+        }
+      }
+      notifyCount.innerText = checked;
+    });
   }
-
-  notifyCount[0].innerText = checked;
-
-  notification.classList.toggle("active");
 }
 
-iconLight.addEventListener("click", getCount);
+document.addEventListener("click", getCount);
+
+document.addEventListener("click", function (event) {
+  console.log(event.target);
+});

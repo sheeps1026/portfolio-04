@@ -121,10 +121,6 @@
   font-size: 23px;
 }
 
-.notification i.active {
-  color: green;
-}
-
 .notify-count {
   position: absolute;
   top: -8px;
