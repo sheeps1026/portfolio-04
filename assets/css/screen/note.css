@@ -9,45 +9,31 @@
 .note-information {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .note-tags {
-  height: 35px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.tag {
-  display: inline-block;
-  margin: 2px 3px;
-  padding: 5px 10px;
-  border-radius: 100px;
-  background-color: #e9edee;
-  font-size: 12px;
-  line-height: 1.6666;
-  transition: all 0.1s linear;
-}
-
-.tag:hover {
-  color: #fff;
-  background-color: #f5deb3;
-}
-
-.notes-close::after {
-  content: "x";
-  margin-left: 10px;
-  font-weight: 700;
-}
-
-.notes-close:hover::after {
-  color: red;
-}
-
-.notes-input {
-  width: 250px;
-  margin-left: 10px;
-  padding: 7.5px 0;
+.tag-input {
+  padding-left: 5px;
   border: none;
-  outline: none;
+}
+
+.tag-input:hover {
+  border: 1px solid #999;
+}
+
+.add-tag {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.add-tag i {
+  pointer-events: none;
 }
 
 .note-icons {
@@ -79,6 +65,31 @@
   transform: scale(1.3);
 }
 
+.tags-list {
+  margin-bottom: 25px;
+}
+
+.tags-item {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 5px 10px;
+  border-radius: 100px;
+  background-color: #e9edee;
+  font-size: 12px;
+  line-height: 1.6666;
+  transition: all 0.1s linear;
+}
+
+.tags-item:hover {
+  color: #fff;
+  background-color: #f5deb3;
+  cursor: pointer;
+}
+
+.tags-item.checked {
+  text-decoration: line-through;
+}
+
 .note-days {
   display: flex;
   margin-bottom: 20px;
@@ -107,16 +118,20 @@
 }
 
 .note-title {
-  width: 700px;
+  width: 400px;
   border: none;
   background: none;
-  color: #777;
+  color: #263339;
   font-size: 30px;
   line-height: 1.1666;
 }
 
 .note-title:hover {
   border: 1px solid #777;
+}
+
+.note-header div {
+  display: flex;
 }
 
 .note-header div button {
@@ -142,8 +157,10 @@
   padding: 5px;
   border: none;
   background: none;
+  color: #717679;
   font-size: 16px;
   line-height: 1.5625;
+  resize: none;
 }
 
 .note-desc:hover {
@@ -153,4 +170,5 @@
 .note-textarea textarea {
   width: 100%;
   padding: 5px;
+  resize: none;
 }

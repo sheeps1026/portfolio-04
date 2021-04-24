@@ -114,11 +114,15 @@
         <ul class="note-list">
           <li class="note">
             <div class="note-information">
-              <div class="note-tags" data-name="notes-input">
-                <!-- <span class="tag">99u<span class="notes-close"></span></span>
-                    <span class="tag">Design<span class="notes-close"></span></span>
-                    <span class="tag">Conference<span class="notes-close"></span></span> -->
-                <!-- <input class="notes--input" type="text" /> -->
+              <div class="note-tags">
+                <input
+                  class="tag-input"
+                  type="text"
+                  placeholder="태그를 입력하세요."
+                />
+                <button id="addTag" class="add-tag" type="button">
+                  <i class="fas fa-plus"></i>
+                </button>
               </div>
               <div class="note-icons">
                 <button class="icon-clock" type="button">
@@ -132,6 +136,11 @@
                 </button>
               </div>
             </div>
+            <ul class="tags-list">
+              <!-- <li class="tags-item">
+                <span>커피 마시기</span>
+              </li> -->
+            </ul>
             <div class="note-days">
               <p>Created: 13 Jun</p>
               <p>Updated: 19 Jun</p>
@@ -179,7 +188,7 @@
       <p>The current time is</p>
       <h1>00:00</h1>
       <button class="clock-btn">
-        <i class="fas fa-times"></i>
+        <i id="clockBtn" class="fas fa-times"></i>
       </button>
     </div>
 
@@ -187,7 +196,7 @@
     <script src="./assets/js/tags.js"></script>
     <script src="./assets/js/search.js"></script>
     <script src="./assets/js/clock.js"></script>
-    <script src="./assets/js/notification.js"></script>
+    <!-- <script src="./assets/js/notification.js"></script> -->
     <script src="./assets/js/form.js"></script>
     <script src="./assets/js/delete.js"></script>
     <script src="./assets/js/create.js"></script>

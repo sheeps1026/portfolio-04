@@ -6,36 +6,34 @@ function modify(event) {
   const noteTitle = document.querySelectorAll(".note-title");
   const noteDesc = document.querySelectorAll(".note-desc");
 
-  let elem = event.target;
+  let modifyText;
 
-  if (elem.id === "modifyBtn") {
-    for (let i = 0; i < modifyBtn.length; i++) {
-      for (let j = 0; j < noteDesc.length; j++) {
+  for (let i = 0; i < modifyBtn.length; i++) {
+    for (let j = 0; j < noteDesc.length; j++) {
+      modifyBtn[i].addEventListener("click", () => {
         if (i === j) {
-          let modifyText;
-
           if (modifyBtn[i].innerText === "수정하기") {
-            noteTitle[i].removeAttribute("disabled");
-            noteDesc[i].removeAttribute("disabled");
+            noteTitle[j].removeAttribute("disabled");
+            noteDesc[j].removeAttribute("disabled");
 
-            noteTitle[i].style.backgroundColor = "#F5F5F6";
-            noteDesc[i].style.backgroundColor = "#F5F5F6";
+            noteTitle[j].style.backgroundColor = "#eceff1";
+            noteDesc[j].style.backgroundColor = "#eceff1";
 
             modifyBtn[i].innerText = "수정중";
           } else {
-            noteTitle[i].setAttribute("disabled", true);
-            noteDesc[i].setAttribute("disabled", true);
+            noteTitle[j].setAttribute("disabled", true);
+            noteDesc[j].setAttribute("disabled", true);
 
-            noteTitle[i].style.background = "none";
-            noteDesc[i].style.background = "none";
+            noteTitle[j].style.background = "none";
+            noteDesc[j].style.background = "none";
 
             modifyBtn[i].innerText = "수정하기";
 
-            modifyText = noteDesc[i].value;
-            noteDesc[i].innerHTML = modifyText;
+            modifyText = noteDesc[j].value;
+            noteDesc[j].innerHTML = modifyText;
           }
         }
-      }
+      });
     }
   }
 }
@@ -65,14 +63,20 @@ function copy() {
 }
 
 function noteText() {
-  const input = document.querySelector(".sidebar-item input");
-  const textarea = document.querySelector(".sidebar-item textarea");
+  const input = document.querySelectorAll(".sidebar-item input");
+  const textarea = document.querySelectorAll(".sidebar-item textarea");
 
-  const noteTitle = document.querySelector(".note-title");
-  const noteDesc = document.querySelector(".note-desc");
+  const noteTitle = document.querySelectorAll(".note-title");
+  const noteDesc = document.querySelectorAll(".note-desc");
 
-  input.value = noteTitle.value;
-  textarea.value = noteDesc.value;
+  for (let i = 0; i < input.length; i++) {
+    for (let j = 0; j < noteTitle.length; j++) {
+      if (i == j) {
+        input[i].value = noteTitle[j].value;
+        textarea[i].value = noteDesc[j].value;
+      }
+    }
+  }
 }
 
 document.addEventListener("click", modify);

@@ -7,11 +7,12 @@ function createPreview() {
 
   const sidebarItem = document.createElement("li");
   sidebarItem.classList.add("sidebar-item");
+  sidebarItem.style.backgroundColor = "#eceff1";
   sidebarList.appendChild(sidebarItem);
 
   const input = document.createElement("input");
   const textarea = document.createElement("textarea");
-  input.value = "기본적인 문석 작성툴입니다.";
+  input.value = "기본적인 문서 작성 툴입니다.";
   textarea.innerText =
     "작성법은 상당히 간단합니다. 쓰고 싶은 글의 내용을 생각하고 그걸 적으면 됩니다.";
   input.setAttribute("disabled", true);
@@ -39,8 +40,23 @@ function createNote() {
 
   const noteTags = document.createElement("div");
   noteTags.classList.add("note-tags");
-  noteTags.setAttribute("data-name", "notes-input");
   noteInformation.appendChild(noteTags);
+
+  const tagsInput = document.createElement("input");
+  tagsInput.classList.add("tag-input");
+  tagsInput.setAttribute("type", "text");
+  tagsInput.placeholder = "태그를 입력하세요.";
+  noteTags.appendChild(tagsInput);
+
+  const addTags = document.createElement("button");
+  addTags.setAttribute("id", "addTag");
+  addTags.classList.add("add-tag");
+  addTags.setAttribute("type", "button");
+  noteTags.appendChild(addTags);
+
+  const ICON_5 = document.createElement("i");
+  ICON_5.classList.add("fas", "fa-plus");
+  addTags.appendChild(ICON_5);
 
   const noteIcons = document.createElement("div");
   noteIcons.classList.add("note-icons");
@@ -71,6 +87,19 @@ function createNote() {
   ICON_3.classList.add("far", "fa-trash-alt");
   iconDelete.appendChild(ICON_3);
 
+  // tags-list
+  const tagsList = document.createElement("ul");
+  tagsList.classList.add("tags-list");
+  note.appendChild(tagsList);
+
+  // const tagsItem = document.createElement("li");
+  // tagsItem.classList.add("tags-item");
+  // tagsList.appendChild(tagsItem);
+
+  // const tagsItemSpan = document.createElement("span");
+  // tagsItemSpan.innerText = "커피 마시기";
+  // tagsItem.appendChild(tagsItemSpan);
+
   // note-days
   const noteDays = document.createElement("div");
   noteDays.classList.add("note-days");
@@ -100,7 +129,7 @@ function createNote() {
   const noteTitle = document.createElement("input");
   noteTitle.classList.add("note-title");
   noteTitle.setAttribute("disabled", true);
-  noteTitle.value = "기본적인 문서 작성 툴입니다";
+  noteTitle.value = "기본적인 문서 작성 툴입니다.";
   noteHeader.appendChild(noteTitle);
 
   const noteHeaderBox = document.createElement("div");
@@ -134,7 +163,7 @@ function createNote() {
   const noteTextarea_TEXTAREA = document.createElement("textarea");
   noteTextarea_TEXTAREA.placeholder = "텍스트를 입력하세요";
   noteTextarea_TEXTAREA.setAttribute("cols", 30);
-  noteTextarea_TEXTAREA.setAttribute("rows", 10);
+  noteTextarea_TEXTAREA.setAttribute("rows", 15);
   noteTextarea.appendChild(noteTextarea_TEXTAREA);
 }
 
@@ -146,15 +175,20 @@ function previewBtn() {
   let note = document.querySelectorAll(".note");
 
   for (let i = 0; i < note.length - 1; i++) {
+    sidebarItem[i].style.background = "none";
     note[i].style.display = "none";
   }
 
   for (let j = 0; j < sidebarItem.length; j++) {
     sidebarItem[j].addEventListener("click", () => {
+      sidebarItem[j].classList.add("active");
+      sidebarItem[j].style.backgroundColor = "#eceff1";
       note[j].style.display = "block";
 
       for (let k = 0; k < note.length; k++) {
         if (j !== k) {
+          sidebarItem[k].classList.remove("active");
+          sidebarItem[k].style.background = "none";
           note[k].style.display = "none";
         }
       }

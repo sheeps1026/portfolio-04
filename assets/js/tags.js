@@ -1,84 +1,40 @@
-// Add tags
-[].forEach.call(document.getElementsByClassName("note-tags"), function (el) {
-  const notesInput = document.createElement("input");
-  const hiddenInput = document.createElement("input");
-  const tags = [];
+"use strict";
 
-  notesInput.setAttribute("type", "text");
-  notesInput.classList.add("notes-input");
-  notesInput.placeholder = "태그를 입력하고 ,를 누르세요";
+function addItem(event) {
+  const tagInput = document.querySelector(".tag-input");
+  let tagInputText;
+  const tagsList = document.querySelector(".tags-list");
 
-  hiddenInput.setAttribute("type", "hidden");
-  hiddenInput.setAttribute("name", el.getAttribute("data-name"));
+  let elem = event.target;
 
-  notesInput.addEventListener("input", function () {
-    const enteredTag = notesInput.value.split(",");
+  if (elem.id === "addTag") {
+    tagInputText = tagInput.value;
 
-    if (enteredTag.length > 1) {
-      enteredTag.forEach(function (t) {
-        const filteredTag = filterTag(t);
-        if (filteredTag.length > 0) addTag(filteredTag);
-      });
-      notesInput.value = "";
+    if (tagInputText == "") {
+      alert("아무 태그나 입력하세요.");
+    } else {
+      const tagsItem = document.createElement("li");
+      tagsItem.classList.add("tags-item");
+      tagsList.appendChild(tagsItem);
+
+      const tagsItemSpan = document.createElement("span");
+      tagsItem.appendChild(tagsItemSpan);
+
+      tagsItem.innerHTML = tagInputText;
+
+      tagsList.insertBefore(tagsItem, tagsList.childNodes[0]);
+
+      tagInput.value = "";
     }
-  });
-
-  notesInput.addEventListener("keydown", function (e) {
-    const keyCode = e.which || e.keyCode;
-    if (keyCode === 8 && notesInput.value.length === 0 && tags.length > 0) {
-      removeTag(tags.length - 1);
-    }
-  });
-
-  el.appendChild(notesInput);
-  el.appendChild(hiddenInput);
-
-  addTag("99u");
-  addTag("Design");
-  addTag("Conference");
-
-  function addTag(text) {
-    const tag = {
-      text: text,
-      element: document.createElement("span"),
-    };
-
-    tag.element.classList.add("tag");
-    tag.element.textContent = tag.text;
-
-    const notesClose = document.createElement("span");
-    notesClose.classList.add("notes-close");
-    notesClose.addEventListener("click", function () {
-      removeTag(tags.indexOf(tag));
-    });
-    tag.element.appendChild(notesClose);
-
-    tags.push(tag);
-
-    el.insertBefore(tag.element, notesInput);
-
-    refreshTags();
   }
+}
 
-  function removeTag(index) {
-    const tag = tags[index];
-    tags.splice(index, 1);
-    el.removeChild(tag.element);
-    refreshTags();
-  }
+// tagsList.addEventListener("click", function (event) {
+//   let elem = event.target;
 
-  function refreshTags() {
-    const tagsList = [];
-    tags.forEach(function (t) {
-      tagsList.push(t.text);
-    });
-    hiddenInput.value = tagsList.join(",");
-  }
+//   if (elem.classList.contains("tags-item")) {
+//     elem.classList.toggle("checked");
+//   }
+// });
 
-  function filterTag(tag) {
-    return tag
-      .replace(/[^\w -]/g, "")
-      .trim()
-      .replace(/\W+/g, "-");
-  }
-});
+document.addEventListener("click", addItem);

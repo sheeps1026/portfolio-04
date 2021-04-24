@@ -33,15 +33,20 @@
 
 .sidebar-item {
   padding: 20px 30px 20px 22px;
+  background-color: #eceff1;
   cursor: pointer;
 }
 
 .sidebar-item:hover {
-  background-color: #f9fafc;
+  background-color: #eceff1;
 }
 
 .sidebar-item:last-child {
   margin-bottom: 0;
+}
+
+.sidebar-item.active {
+  background-color: #eceff1;
 }
 
 .sidebar-item input {
