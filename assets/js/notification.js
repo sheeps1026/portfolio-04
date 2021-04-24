@@ -1,27 +1,29 @@
 "use strict";
 
-function getCount() {
+function getCount(event) {
+  let button = event.target.closest("button");
+
+  if (!button) {
+    return;
+  }
+
   let notifyCount = document.querySelector(".notify-count");
+
   const iconLight = document.querySelectorAll(".icon-light");
 
+  button.classList.toggle("active");
+
   for (let i = 0; i < iconLight.length; i++) {
-    iconLight[i].addEventListener("click", () => {
-      let checked = 0;
+    let checked = 0;
 
-      iconLight[i].classList.toggle("active");
-
-      for (let j = 0; j < iconLight.length; j++) {
-        if (iconLight[j].classList.contains("active")) {
-          checked += 1;
-        }
+    for (let j = 0; j < iconLight.length; j++) {
+      if (iconLight[j].classList.contains("active")) {
+        checked += 1;
       }
+
       notifyCount.innerText = checked;
-    });
+    }
   }
 }
 
 document.addEventListener("click", getCount);
-
-document.addEventListener("click", function (event) {
-  console.log(event.target);
-});
