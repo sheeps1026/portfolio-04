@@ -45,7 +45,7 @@ function createNote() {
   const tagsInput = document.createElement("input");
   tagsInput.classList.add("tag-input");
   tagsInput.setAttribute("type", "text");
-  tagsInput.placeholder = "태그를 입력하세요.";
+  tagsInput.placeholder = "태그를 입력하세요. 더블클릭하면 태그가 지워집니다.";
   noteTags.appendChild(tagsInput);
 
   const addTags = document.createElement("button");

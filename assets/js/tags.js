@@ -9,7 +9,6 @@ function addItem(event) {
 
     if (tagInput.value == "") {
       alert("아무 태그나 입력하세요.");
-
       return;
     }
 
@@ -30,8 +29,9 @@ function addItem(event) {
   }
 }
 
-document.addEventListener("click", function (event) {
+function removeTag(event) {
   let elem = event.target;
+  const tagItem = document.querySelectorAll(".tag-item");
 
   if (elem.nodeName === "SPAN") {
     while (!elem.classList.contains("tag-item")) {
@@ -39,7 +39,6 @@ document.addEventListener("click", function (event) {
 
       if (elem.nodeName === "BODY") {
         elem = null;
-
         return;
       }
     }
@@ -48,8 +47,15 @@ document.addEventListener("click", function (event) {
   if (elem.id === "tagItem") {
     if (elem.classList.contains("tag-item")) {
       elem.classList.toggle("checked");
+
+      for (let i = 0; i < tagItem.length; i++) {
+        tagItem[i].addEventListener("dblclick", () => {
+          elem.remove();
+        });
+      }
     }
   }
-});
+}
 
 document.addEventListener("click", addItem);
+document.addEventListener("click", removeTag);

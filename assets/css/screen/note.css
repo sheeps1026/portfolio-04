@@ -18,6 +18,7 @@
 }
 
 .tag-input {
+  width: 400px;
   padding-left: 5px;
   border: none;
 }
