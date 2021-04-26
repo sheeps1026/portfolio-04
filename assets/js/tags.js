@@ -1,40 +1,55 @@
 "use strict";
 
 function addItem(event) {
-  const tagInput = document.querySelector(".tag-input");
-  let tagInputText;
-  const tagsList = document.querySelector(".tags-list");
+  const target = event.target;
+  let tagInput, tagsList;
 
-  let elem = event.target;
+  if (target.id === "addTag") {
+    tagInput = target.previousElementSibling;
 
-  if (elem.id === "addTag") {
-    tagInputText = tagInput.value;
-
-    if (tagInputText == "") {
+    if (tagInput.value == "") {
       alert("아무 태그나 입력하세요.");
-    } else {
-      const tagsItem = document.createElement("li");
-      tagsItem.classList.add("tags-item");
-      tagsList.appendChild(tagsItem);
 
-      const tagsItemSpan = document.createElement("span");
-      tagsItem.appendChild(tagsItemSpan);
-
-      tagsItem.innerHTML = tagInputText;
-
-      tagsList.insertBefore(tagsItem, tagsList.childNodes[0]);
-
-      tagInput.value = "";
+      return;
     }
+
+    tagsList = target.parentNode.parentNode.nextElementSibling;
+
+    const tagItem = document.createElement("li");
+    tagItem.setAttribute("id", "tagItem");
+    tagItem.classList.add("tag-item");
+    tagsList.appendChild(tagItem);
+
+    const tagsItemSpan = document.createElement("span");
+    tagItem.appendChild(tagsItemSpan);
+
+    tagItem.innerHTML = tagInput.value;
+
+    tagsList.insertBefore(tagItem, tagsList.childNodes[0]);
+    tagInput.value = "";
   }
 }
 
-// tagsList.addEventListener("click", function (event) {
-//   let elem = event.target;
+document.addEventListener("click", function (event) {
+  let elem = event.target;
 
-//   if (elem.classList.contains("tags-item")) {
-//     elem.classList.toggle("checked");
-//   }
-// });
+  if (elem.nodeName === "SPAN") {
+    while (!elem.classList.contains("tag-item")) {
+      elem = elem.parentNode;
+
+      if (elem.nodeName === "BODY") {
+        elem = null;
+
+        return;
+      }
+    }
+  }
+
+  if (elem.id === "tagItem") {
+    if (elem.classList.contains("tag-item")) {
+      elem.classList.toggle("checked");
+    }
+  }
+});
 
 document.addEventListener("click", addItem);

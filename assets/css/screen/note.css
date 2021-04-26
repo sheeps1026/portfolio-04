@@ -9,12 +9,12 @@
 .note-information {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 15px;
 }
 
 .note-tags {
   display: flex;
-  justify-content: space-between;
 }
 
 .tag-input {
@@ -66,10 +66,11 @@
 }
 
 .tags-list {
-  margin-bottom: 25px;
+  display: flex;
+  margin-bottom: 15px;
 }
 
-.tags-item {
+.tag-item {
   display: inline-block;
   margin-right: 15px;
   padding: 5px 10px;
@@ -80,19 +81,19 @@
   transition: all 0.1s linear;
 }
 
-.tags-item:hover {
+.tag-item:hover {
   color: #fff;
   background-color: #f5deb3;
   cursor: pointer;
 }
 
-.tags-item.checked {
+.tag-item.checked {
   text-decoration: line-through;
 }
 
 .note-days {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding-left: 5px;
 }
 

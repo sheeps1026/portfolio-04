@@ -92,13 +92,14 @@ function createNote() {
   tagsList.classList.add("tags-list");
   note.appendChild(tagsList);
 
-  // const tagsItem = document.createElement("li");
-  // tagsItem.classList.add("tags-item");
-  // tagsList.appendChild(tagsItem);
+  const tagItem = document.createElement("li");
+  tagItem.setAttribute("id", "tagItem");
+  tagItem.classList.add("tag-item");
+  tagsList.appendChild(tagItem);
 
-  // const tagsItemSpan = document.createElement("span");
-  // tagsItemSpan.innerText = "커피 마시기";
-  // tagsItem.appendChild(tagsItemSpan);
+  const tagsItemSpan = document.createElement("span");
+  tagsItemSpan.innerText = "HTML & CSS";
+  tagItem.appendChild(tagsItemSpan);
 
   // note-days
   const noteDays = document.createElement("div");
@@ -111,11 +112,6 @@ function createNote() {
   P_2.innerText = "Updated: 19 Jun";
   noteDays.appendChild(P_1);
   noteDays.appendChild(P_2);
-
-  // note-separator
-  const noteSeparator = document.createElement("div");
-  noteSeparator.classList.add("note-separator");
-  note.appendChild(noteSeparator);
 
   // note-text
   const noteText = document.createElement("div");

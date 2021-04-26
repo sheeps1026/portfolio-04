@@ -1,14 +1,11 @@
 "use strict";
 
 function getCount(event) {
-  let button = event.target.closest("button");
+  let button = event.target.closest(".icon-light");
 
-  if (!button) {
-    return;
-  }
+  if (!button) return;
 
   let notifyCount = document.querySelector(".notify-count");
-
   const iconLight = document.querySelectorAll(".icon-light");
 
   button.classList.toggle("active");
