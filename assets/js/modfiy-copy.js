@@ -1,40 +1,37 @@
 "use strict";
 
 function modify(event) {
-  const modifyBtn = document.querySelectorAll(".modify-btn");
+  let button = event.target.closest(".modify-btn");
 
+  if (!button) return;
+
+  const buttons = document.querySelectorAll(".modify-btn");
   const noteTitle = document.querySelectorAll(".note-title");
   const noteDesc = document.querySelectorAll(".note-desc");
 
+  const index = Array.prototype.indexOf.call(buttons, button);
+
   let modifyText;
 
-  for (let i = 0; i < modifyBtn.length; i++) {
-    for (let j = 0; j < noteDesc.length; j++) {
-      modifyBtn[i].addEventListener("click", () => {
-        if (i === j) {
-          if (modifyBtn[i].innerText === "수정하기") {
-            noteTitle[j].removeAttribute("disabled");
-            noteDesc[j].removeAttribute("disabled");
+  if (button.innerText === "수정하기") {
+    noteTitle[index].removeAttribute("disabled");
+    noteDesc[index].removeAttribute("disabled");
 
-            noteTitle[j].style.backgroundColor = "#eceff1";
-            noteDesc[j].style.backgroundColor = "#eceff1";
+    noteTitle[index].style.backgroundColor = "#eceff1";
+    noteDesc[index].style.backgroundColor = "#eceff1";
 
-            modifyBtn[i].innerText = "수정중";
-          } else {
-            noteTitle[j].setAttribute("disabled", true);
-            noteDesc[j].setAttribute("disabled", true);
+    button.innerText = "수정중";
+  } else {
+    noteTitle[index].setAttribute("disabled", true);
+    noteDesc[index].setAttribute("disabled", true);
 
-            noteTitle[j].style.background = "none";
-            noteDesc[j].style.background = "none";
+    noteTitle[index].style.background = "none";
+    noteDesc[index].style.background = "none";
 
-            modifyBtn[i].innerText = "수정하기";
+    button.innerText = "수정하기";
 
-            modifyText = noteDesc[j].value;
-            noteDesc[j].innerHTML = modifyText;
-          }
-        }
-      });
-    }
+    modifyText = noteDesc[index].value;
+    noteDesc[index].innerHTML = modifyText;
   }
 }
 
