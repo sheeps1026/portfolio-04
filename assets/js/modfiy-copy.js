@@ -53,31 +53,13 @@ function copy() {
           document.execCommand("copy");
 
           document.body.removeChild(tempText);
+          // 여기에 setTimeout 사용해서 글씨 바뀌게 해보자
+          // 북마크에 있었던 노랑색, 주황색 그 복사 기능처럼 (찾아보자!)
         }
       });
     }
   }
 }
 
-function noteText() {
-  const input = document.querySelectorAll(".sidebar-item input");
-  const textarea = document.querySelectorAll(".sidebar-item textarea");
-
-  const noteTitle = document.querySelectorAll(".note-title");
-  const noteDesc = document.querySelectorAll(".note-desc");
-
-  for (let i = 0; i < input.length; i++) {
-    for (let j = 0; j < noteTitle.length; j++) {
-      if (i == j) {
-        input[i].value = noteTitle[j].value;
-        textarea[i].value = noteDesc[j].value;
-      }
-    }
-  }
-}
-
 document.addEventListener("click", modify);
 document.addEventListener("click", copy);
-
-noteText();
-setInterval(noteText, 1000);

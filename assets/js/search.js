@@ -5,12 +5,12 @@ function filter() {
   const searchInput = document
     .querySelector(".search-input")
     .value.toUpperCase();
-  const noteItem = document.getElementsByClassName("note-item");
+  const noteItem = document.getElementsByClassName("book-item");
 
   let noteItemTitle = 0;
 
   for (let i = 0; i < noteItem.length; i++) {
-    noteItemTitle = noteItem[i].getElementsByClassName("note-item-title");
+    noteItemTitle = noteItem[i].getElementsByClassName("book-item-title");
 
     if (noteItemTitle[0].innerHTML.toUpperCase().indexOf(searchInput) > -1) {
       noteItem[i].style.display = "flex";

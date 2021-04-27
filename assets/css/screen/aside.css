@@ -14,25 +14,26 @@
   line-height: 1.1875;
 }
 
-.recent-notes {
-  height: 217px;
-  padding: 20px 30px;
+.book-list {
+  height: 367px;
   color: #fff;
   font-size: 14px;
   line-height: 1.1721;
 }
 
-.note-item {
+.book-item {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  padding: 20px 30px;
+  background-color: #424242;
 }
 
-.note-item:last-child {
+.book-item:last-child {
   margin-bottom: 0;
 }
 
-.note-item i {
+.book-item i {
   margin-right: 10px;
 }
 
@@ -43,7 +44,7 @@
 }
 
 .category {
-  height: 655px;
+  height: 505px;
   padding: 20px 0 0 30px;
 }
 
