@@ -52,7 +52,7 @@ function paintToDo(text) {
 
   li.classList.add("toDo-item");
   header.classList.add("toDo-header");
-  content.classList.add("toDo-conent");
+  content.classList.add("toDo-content");
 
   toDoList.appendChild(li);
   li.appendChild(header);

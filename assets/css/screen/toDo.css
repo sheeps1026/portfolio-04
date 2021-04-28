@@ -1,12 +1,15 @@
+.main {
+  display: flex;
+}
+
 .toDo {
-  width: 58.3333%;
-  padding: 37px 66px 0;
+  width: 18.0555%;
+  padding: 15px 30px 0;
 }
 
 .toDo-form {
   display: flex;
   align-items: center;
-  width: 350px;
   height: 30px;
   margin-bottom: 40px;
   border: 1px solid rgb(118, 118, 118);
@@ -14,7 +17,7 @@
 }
 
 .toDo-form input {
-  width: 280px;
+  width: 100%;
   border: none;
   color: #777777;
   font-size: 14px;
@@ -36,8 +39,7 @@
 
 .toDo-item {
   position: relative;
-  width: 200px;
-  margin-right: 70px;
+  width: 100%;
   margin-bottom: 50px;
 }
 
@@ -46,8 +48,8 @@
   background-color: #fced83;
 }
 
-.toDo-conent {
-  height: 200px;
+.toDo-content {
+  height: 150px;
   background-color: #ffff9d;
 }
 

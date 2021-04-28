@@ -3,14 +3,14 @@
 }
 
 .note {
-  padding: 37px 66px 0;
+  padding: 15px 30px 0;
 }
 
 .note-information {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .note-tags {
@@ -68,7 +68,7 @@
 
 .tags-list {
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .tag-item {

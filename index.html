@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./assets/css/reset-style.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/screen/header.css" />
-    <link rel="stylesheet" href="./assets/css/screen/aside.css" />
+    <link rel="stylesheet" href="./assets/css/screen/toDo.css" />
     <link rel="stylesheet" href="./assets/css/screen/sidebar.css" />
     <link rel="stylesheet" href="./assets/css/screen/note.css" />
     <link rel="stylesheet" href="./assets/css/modal/clock.css" />
@@ -59,39 +59,18 @@
     </header>
 
     <main class="main">
-      <aside class="aside">
-        <h3>모든 책</h3>
-        <ul class="book-list">
-          <li class="book-item">
-            <i class="far fa-copy"></i>
-            <span class="book-item-title">기본 문서 1</span>
-          </li>
-        </ul>
-        <div class="aside-separator"></div>
-        <div class="category">
-          <button class="book-create">
-            <i class="fas fa-plus-circle"></i>
-            <p>책 추가하기</p>
-          </button>
-          <nav>
-            <ul>
-              <li class="memo">
-                <a href="./pages/memo.html">
-                  <i class="fas fa-tag"></i>
-                  <p>메모</p>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="aside-separator"></div>
-        <div class="copyright">
-          <p>Copyright © 2021 Yang Seunggap.</p>
-        </div>
-      </aside>
+      <section class="toDo">
+        <form class="toDo-form" action="">
+          <i class="fas fa-pen"></i>
+          <input type="text" placeholder="메모할 내용을 입력하세요" />
+        </form>
+        <ul class="toDo-list"></ul>
+      </section>
+
+      <div class="main-separator"></div>
 
       <section class="sidebar">
-        <button class="note-create">
+        <button id="noteCreate" class="note-create">
           <i class="fas fa-plus-circle"></i>
           <p>새 글 작성하기</p>
         </button>
@@ -198,5 +177,6 @@
     <script src="./assets/js/delete.js"></script>
     <script src="./assets/js/create.js"></script>
     <script src="./assets/js/item-list.js"></script>
+    <script src="./assets/js/to-do.js"></script>
   </body>
 </html>
