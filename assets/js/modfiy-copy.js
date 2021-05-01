@@ -35,30 +35,30 @@ function modify(event) {
   }
 }
 
-function copy() {
+function copy(event) {
+  let button = event.target.closest(".note-copy");
+  if (!button) return;
+
   const noteCopy = document.querySelectorAll(".note-copy");
   const noteDesc = document.querySelectorAll(".note-desc");
 
-  for (let i = 0; i < noteDesc.length; i++) {
-    for (let j = 0; j < noteCopy.length; j++) {
-      noteCopy[j].addEventListener("click", () => {
-        if (i === j) {
-          const tempText = document.createElement("textarea");
-          tempText.classList.add("temp-text");
-          document.body.appendChild(tempText);
+  const index = Array.prototype.indexOf.call(noteCopy, button);
 
-          tempText.innerHTML = noteDesc[i].innerHTML;
+  const tempText = document.createElement("textarea");
+  tempText.classList.add("temp-text");
+  document.body.appendChild(tempText);
 
-          tempText.select();
-          document.execCommand("copy");
+  tempText.innerHTML = noteDesc[index].innerHTML;
 
-          document.body.removeChild(tempText);
-          // 여기에 setTimeout 사용해서 글씨 바뀌게 해보자
-          // 북마크에 있었던 노랑색, 주황색 그 복사 기능처럼 (찾아보자!)
-        }
-      });
-    }
-  }
+  tempText.select();
+  document.execCommand("copy");
+
+  document.body.removeChild(tempText);
+
+  noteCopy[index].innerText = "복사성공";
+  setTimeout(function () {
+    noteCopy[index].innerText = "복사하기";
+  }, 2000);
 }
 
 document.addEventListener("click", modify);

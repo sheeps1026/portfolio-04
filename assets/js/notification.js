@@ -2,7 +2,6 @@
 
 function getCount(event) {
   let button = event.target.closest(".icon-light");
-
   if (!button) return;
 
   let notifyCount = document.querySelector(".notify-count");

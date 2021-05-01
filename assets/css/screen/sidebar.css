@@ -74,6 +74,6 @@
 
 .main-separator {
   width: 1px;
-  height: auto;
+  height: 100vh;
   background: #dbe0e2;
 }
