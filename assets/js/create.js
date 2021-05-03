@@ -29,6 +29,7 @@ function createPreview(event) {
 
   const input = document.createElement("input");
   const textarea = document.createElement("textarea");
+  input.classList.add("sidebar-item-title");
   input.value = "기본적인 문서 작성 툴입니다.";
   textarea.innerText =
     "작성법은 상당히 간단합니다. 쓰고 싶은 글의 내용을 생각하고 그걸 적으면 됩니다.";
@@ -184,7 +185,6 @@ function createNote() {
 
 function previewBtn(event) {
   let button = event.target.closest(".note-create");
-
   if (!button) return;
 
   createPreview(event);

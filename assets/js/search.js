@@ -1,23 +1,23 @@
-// Search
-const searchInput = document.querySelector(".search-input");
-
-function filter() {
+function filter(event) {
   const searchInput = document
     .querySelector(".search-input")
     .value.toUpperCase();
-  const noteItem = document.getElementsByClassName("book-item");
+  const sidebarItem = document.getElementsByClassName("sidebar-item");
 
-  let noteItemTitle = 0;
+  let sidebarItemTitle = 0;
 
-  for (let i = 0; i < noteItem.length; i++) {
-    noteItemTitle = noteItem[i].getElementsByClassName("book-item-title");
+  if (event.target.classList.contains("search-input"))
+    for (let i = 0; i < sidebarItem.length; i++) {
+      sidebarItemTitle = sidebarItem[i].getElementsByClassName(
+        "sidebar-item-title"
+      );
 
-    if (noteItemTitle[0].innerHTML.toUpperCase().indexOf(searchInput) > -1) {
-      noteItem[i].style.display = "flex";
-    } else {
-      noteItem[i].style.display = "none";
+      if (sidebarItemTitle[0].value.toUpperCase().indexOf(searchInput) > -1) {
+        sidebarItem[i].style.display = "block";
+      } else {
+        sidebarItem[i].style.display = "none";
+      }
     }
-  }
 }
 
-searchInput.addEventListener("keyup", filter);
+document.addEventListener("keyup", filter);
