@@ -24,6 +24,7 @@ function createPreview(event) {
 
   const sidebarItem = document.createElement("li");
   sidebarItem.classList.add("sidebar-item");
+  sidebarItem.classList.add("active");
   sidebarItem.style.backgroundColor = "#eceff1";
   sidebarList[index].appendChild(sidebarItem);
 
@@ -193,6 +194,7 @@ function previewBtn(event) {
   let note = document.querySelectorAll(".note");
 
   for (let i = 0; i < note.length - 1; i++) {
+    !sidebarItem[i].classList.remove("active");
     sidebarItem[i].style.background = "none";
     note[i].style.display = "none";
   }

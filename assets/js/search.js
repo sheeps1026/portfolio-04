@@ -6,18 +6,17 @@ function filter(event) {
 
   let sidebarItemTitle = 0;
 
-  if (event.target.classList.contains("search-input"))
-    for (let i = 0; i < sidebarItem.length; i++) {
-      sidebarItemTitle = sidebarItem[i].getElementsByClassName(
-        "sidebar-item-title"
-      );
+  for (let i = 0; i < sidebarItem.length; i++) {
+    sidebarItemTitle = sidebarItem[i].getElementsByClassName(
+      "sidebar-item-title"
+    );
 
-      if (sidebarItemTitle[0].value.toUpperCase().indexOf(searchInput) > -1) {
-        sidebarItem[i].style.display = "block";
-      } else {
-        sidebarItem[i].style.display = "none";
-      }
+    if (sidebarItemTitle[0].value.toUpperCase().indexOf(searchInput) > -1) {
+      sidebarItem[i].style.display = "block";
+    } else {
+      sidebarItem[i].style.display = "none";
     }
+  }
 }
 
 document.addEventListener("keyup", filter);
