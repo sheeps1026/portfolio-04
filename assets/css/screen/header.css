@@ -6,12 +6,40 @@
   background-color: #dbe0e2;
 }
 
+.left-header {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.header-arrow {
+  display: flex;
+  align-items: center;
+  margin-right: 18px;
+}
+
+.header-arrow__prev,
+.header-arrow__next {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.header-arrow__prev {
+  margin-right: 10px;
+}
+
+.header-arrow__prev i,
+.header-arrow__next i {
+  color: #777777;
+  font-size: 16px;
+}
+
 .search {
   display: flex;
   align-items: center;
   width: 340px;
   height: 30px;
-  margin-left: 30px;
   border-radius: 4px;
   background-color: #fff;
 }
